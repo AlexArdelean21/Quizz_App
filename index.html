@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Business Law Quiz - Interactive Learning</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="quiz-header">
+      <h1>📚 Business Law Quiz</h1>
+      <p class="subtitle">Test your knowledge of business law concepts</p>
+    </header>
+
+    <div id="start-screen" class="screen active">
+      <div class="start-content">
+        <h2>Ready to Test Your Knowledge?</h2>
+        <p>This quiz contains 20 randomly selected questions from our comprehensive business law question pool.</p>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number" id="total-questions">65+</span>
+            <span class="stat-label">Total Questions</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">20</span>
+            <span class="stat-label">Per Quiz</span>
+          </div>
+        </div>
+        <button id="start-quiz" class="btn btn-primary">Start Quiz</button>
+      </div>
+    </div>
+
+    <div id="quiz-screen" class="screen">
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      
+      <div class="quiz-info">
+        <span id="question-counter">Question 1 of 20</span>
+        <span id="score-display">Score: 0</span>
+      </div>
+
+      <div class="question-container">
+        <h2 id="question">Loading question...</h2>
+        <div id="options" class="options-container">
+          <!-- Options will be populated here -->
+        </div>
+      </div>
+
+      <div class="quiz-controls">
+        <button id="submit" class="btn btn-primary" disabled>Submit Answer</button>
+        <button id="next" class="btn btn-secondary hidden">Next Question</button>
+      </div>
+
+      <div id="feedback" class="feedback hidden">
+        <!-- Feedback will be shown here -->
+      </div>
+    </div>
+
+    <div id="result-screen" class="screen">
+      <div class="result-content">
+        <div class="result-icon" id="result-icon">🎉</div>
+        <h2 id="result-title">Quiz Complete!</h2>
+        <div class="final-score">
+          <span class="score-text">Your Score</span>
+          <span class="score-value" id="final-score">0/20</span>
+          <span class="score-percentage" id="score-percentage">0%</span>
+        </div>
+        <div class="performance-message" id="performance-message">
+          <!-- Performance message will be shown here -->
+        </div>
+        <div class="result-actions">
+          <button id="restart-quiz" class="btn btn-primary">Take Another Quiz</button>
+          <button id="review-answers" class="btn btn-secondary">Review Answers</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
