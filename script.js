@@ -1313,7 +1313,7 @@ const firebaseConfig = {
   measurementId: "G-5E47GKCJT2"
 };
 
-// Real-time Active Users Counter with Firebase
+// Real-time Active Users Counter with Firebase + Fake Boost
 class RealTimeUsersCounter {
   constructor() {
     this.countElement = document.getElementById('active-count');
@@ -1321,12 +1321,71 @@ class RealTimeUsersCounter {
     this.usersRef = null;
     this.database = null;
     this.userId = this.generateUserId();
+    this.realUserCount = 1;
+    this.fakeBoost = this.generateFakeBoost();
+    this.lastBoostUpdate = Date.now();
     
     this.initFirebase();
+    this.startFakeBoostUpdater();
   }
   
   generateUserId() {
     return 'user_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+  }
+  
+  generateFakeBoost() {
+    // Generate fake boost between 3-10 users
+    return Math.floor(Math.random() * 8) + 3; // 3 to 10
+  }
+  
+  startFakeBoostUpdater() {
+    // Update fake boost every 10 minutes (600,000 ms)
+    setInterval(() => {
+      this.updateFakeBoost();
+    }, 600000); // 10 minutes
+    
+    // Also update occasionally for more realistic feel (every 2-5 minutes)
+    setInterval(() => {
+      if (Math.random() < 0.3) { // 30% chance
+        this.updateFakeBoost();
+      }
+    }, Math.random() * 180000 + 120000); // 2-5 minutes
+  }
+  
+  updateFakeBoost() {
+    const oldBoost = this.fakeBoost;
+    const newBoost = this.generateFakeBoost();
+    
+    // 20% chance for sudden drop (like users leaving quickly)
+    if (Math.random() < 0.2 && newBoost < oldBoost) {
+      this.fakeBoost = newBoost;
+      this.updateDisplayedCount();
+      console.log(`User count sudden drop: ${oldBoost} → ${newBoost} fake users`);
+    } else {
+      // Smooth transition
+      this.smoothBoostTransition(oldBoost, newBoost);
+    }
+  }
+  
+  smoothBoostTransition(from, to) {
+    const steps = 8;
+    const stepValue = (to - from) / steps;
+    let current = from;
+    let step = 0;
+    
+    const transition = setInterval(() => {
+      current += stepValue;
+      this.fakeBoost = Math.round(current);
+      this.updateDisplayedCount();
+      step++;
+      
+      if (step >= steps) {
+        this.fakeBoost = to;
+        this.updateDisplayedCount();
+        clearInterval(transition);
+        console.log(`User count smooth transition complete: ${from} → ${to} fake users`);
+      }
+    }, 2000); // Change every 2 seconds for smooth effect
   }
   
   initFirebase() {
@@ -1399,9 +1458,8 @@ class RealTimeUsersCounter {
       });
       
       // Ensure minimum of 1 user (the current user)
-      activeCount = Math.max(1, activeCount);
-      
-      this.updateDisplay(activeCount);
+      this.realUserCount = Math.max(1, activeCount);
+      this.updateDisplayedCount();
     });
     
     // Clean up old/inactive users every 2 minutes
@@ -1425,11 +1483,12 @@ class RealTimeUsersCounter {
     });
   }
   
-  updateDisplay(count) {
-    const currentCount = parseInt(this.countElement.textContent) || 0;
+  updateDisplayedCount() {
+    const totalCount = this.realUserCount + this.fakeBoost;
+    const currentDisplayed = parseInt(this.countElement.textContent) || 0;
     
-    if (currentCount !== count) {
-      this.animateCountChange(currentCount, count);
+    if (currentDisplayed !== totalCount) {
+      this.animateCountChange(currentDisplayed, totalCount);
     }
   }
   
@@ -1454,20 +1513,29 @@ class RealTimeUsersCounter {
   // Fallback for when Firebase isn't configured
   fallbackCounter() {
     console.log('Using fallback counter - please configure Firebase for real-time users');
-    this.countElement.textContent = '1'; // Show at least current user
+    this.realUserCount = 1;
+    this.updateDisplayedCount();
     
-    // Simple increment/decrement to simulate activity
+    // Simulate real user changes occasionally
     setInterval(() => {
-      const current = parseInt(this.countElement.textContent);
-      const change = Math.random() > 0.5 ? 1 : -1;
-      const newCount = Math.max(1, Math.min(50, current + change));
-      this.countElement.textContent = newCount;
+      const change = Math.random() > 0.7 ? (Math.random() > 0.5 ? 1 : -1) : 0;
+      this.realUserCount = Math.max(1, Math.min(5, this.realUserCount + change));
+      this.updateDisplayedCount();
     }, 15000);
   }
   
   // Public method to get current count
   getCurrentCount() {
     return parseInt(this.countElement.textContent) || 0;
+  }
+  
+  // Debug method to see breakdown
+  getCountBreakdown() {
+    return {
+      total: this.getCurrentCount(),
+      real: this.realUserCount,
+      fake: this.fakeBoost
+    };
   }
 }
 
