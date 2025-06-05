@@ -1301,7 +1301,75 @@ class QuizApp {
   }
 }
 
+// Active Users Counter Simulation
+class ActiveUsersCounter {
+  constructor() {
+    this.baseUsers = 35; // Base number of users
+    this.maxVariation = 15; // How much the count can vary
+    this.countElement = document.getElementById('active-count');
+    this.updateInterval = 8000; // Update every 8 seconds
+    
+    this.startCounter();
+  }
+  
+  generateRealisticCount() {
+    const hour = new Date().getHours();
+    
+    // Simulate realistic usage patterns based on time of day
+    let multiplier = 1;
+    if (hour >= 9 && hour <= 17) {
+      multiplier = 1.4; // Higher during business hours
+    } else if (hour >= 19 && hour <= 22) {
+      multiplier = 1.6; // Peak evening study time
+    } else if (hour >= 0 && hour <= 6) {
+      multiplier = 0.6; // Lower during night hours
+    }
+    
+    const variation = Math.random() * this.maxVariation - (this.maxVariation / 2);
+    const count = Math.round((this.baseUsers + variation) * multiplier);
+    
+    return Math.max(12, count); // Minimum of 12 users
+  }
+  
+  updateCount() {
+    const currentCount = parseInt(this.countElement.textContent);
+    const newCount = this.generateRealisticCount();
+    
+    // Animate the change
+    this.animateCountChange(currentCount, newCount);
+  }
+  
+  animateCountChange(from, to) {
+    const steps = 10;
+    const stepValue = (to - from) / steps;
+    let current = from;
+    let step = 0;
+    
+    const animation = setInterval(() => {
+      current += stepValue;
+      this.countElement.textContent = Math.round(current);
+      step++;
+      
+      if (step >= steps) {
+        this.countElement.textContent = to;
+        clearInterval(animation);
+      }
+    }, 50);
+  }
+  
+  startCounter() {
+    // Set initial count
+    this.countElement.textContent = this.generateRealisticCount();
+    
+    // Update periodically
+    setInterval(() => {
+      this.updateCount();
+    }, this.updateInterval);
+  }
+}
+
 // Initialize the quiz app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   new QuizApp();
+  new ActiveUsersCounter();
 });
