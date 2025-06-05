@@ -5,12 +5,12 @@ const questionDatabase = [
     category: "Introduction to Business Law",
     question: "What is the primary purpose of business law?",
     options: [
-      "To regulate commercial transactions and business activities",
-      "To prevent all business competition",
-      "To maximize government revenue",
-      "To eliminate private property rights"
+      "Regulate commerce",
+      "To prevent all business competition and eliminate market forces",
+      "To maximize government revenue through excessive taxation",
+      "To eliminate private property rights completely"
     ],
-    answer: "To regulate commercial transactions and business activities",
+    answer: "Regulate commerce",
     explanation: "Business law serves to provide a legal framework for commercial activities, ensuring fair practices and protecting the rights of all parties involved in business transactions."
   },
   {
@@ -43,10 +43,10 @@ const questionDatabase = [
     category: "Legal Rules",
     question: "What are the essential characteristics of a legal rule?",
     options: [
+      "Complex, ambiguous, and highly flexible in all circumstances",
       "Generality, normativity, and enforceability",
-      "Complexity, ambiguity, and flexibility",
-      "Locality, temporality, and subjectivity",
-      "Simplicity, clarity, and universality"
+      "Locality, temporality, and subjectivity in every case",
+      "Simple and clear"
     ],
     answer: "Generality, normativity, and enforceability",
     explanation: "Legal rules must be general (apply to all similar situations), normative (prescribe behavior), and enforceable (backed by state power)."
@@ -119,10 +119,10 @@ const questionDatabase = [
     category: "Contracts",
     question: "What are the essential elements of a valid contract?",
     options: [
-      "Offer, acceptance, consideration, and legal purpose",
+      "Written documents with multiple witnesses and notarization",
       "Offer and acceptance only",
-      "Written document and signatures",
-      "Lawyer approval and notarization"
+      "Offer, acceptance, consideration, and legal purpose",
+      "Lawyer approval"
     ],
     answer: "Offer, acceptance, consideration, and legal purpose",
     explanation: "A valid contract requires: (1) offer, (2) acceptance, (3) consideration (something of value exchanged), and (4) legal purpose."
@@ -283,12 +283,12 @@ const questionDatabase = [
     category: "Employment Law",
     question: "What is at-will employment?",
     options: [
-      "Employment that can be terminated by either party without cause",
-      "Employment that cannot be terminated",
-      "Employment only for specified projects",
-      "Employment requiring union membership"
+      "Employment requiring union membership and collective bargaining",
+      "Permanent employment that cannot be terminated under any circumstances",
+      "Terminable by either party",
+      "Project-based only"
     ],
-    answer: "Employment that can be terminated by either party without cause",
+    answer: "Terminable by either party",
     explanation: "At-will employment allows either the employer or employee to terminate the employment relationship at any time, for any reason (with some legal exceptions)."
   },
   {
@@ -321,12 +321,12 @@ const questionDatabase = [
     category: "Intellectual Property",
     question: "What is a trademark?",
     options: [
-      "A distinctive sign identifying goods or services",
-      "A secret business process",
-      "A type of business loan",
-      "A government business license"
+      "A secret business process that companies use to maintain competitive advantage",
+      "A type of business loan provided by government institutions",
+      "Brand identifier",
+      "Government license"
     ],
-    answer: "A distinctive sign identifying goods or services",
+    answer: "Brand identifier",
     explanation: "A trademark is a distinctive symbol, word, or phrase that identifies and distinguishes goods or services from those of competitors."
   },
   {
@@ -1301,42 +1301,136 @@ class QuizApp {
   }
 }
 
-// Active Users Counter Simulation
-class ActiveUsersCounter {
+// Firebase Configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCZlimBOZ2yAtj9e_Ulm1I9McWz_8H2gWo",
+  authDomain: "griledrept-acb34.firebaseapp.com",
+  databaseURL: "https://griledrept-acb34-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "griledrept-acb34",
+  storageBucket: "griledrept-acb34.firebasestorage.app",
+  messagingSenderId: "637882042012",
+  appId: "1:637882042012:web:eba724f584377c2bca4f59",
+  measurementId: "G-5E47GKCJT2"
+};
+
+// Real-time Active Users Counter with Firebase
+class RealTimeUsersCounter {
   constructor() {
-    this.baseUsers = 35; // Base number of users
-    this.maxVariation = 15; // How much the count can vary
     this.countElement = document.getElementById('active-count');
-    this.updateInterval = 8000; // Update every 8 seconds
+    this.userRef = null;
+    this.usersRef = null;
+    this.database = null;
+    this.userId = this.generateUserId();
     
-    this.startCounter();
+    this.initFirebase();
   }
   
-  generateRealisticCount() {
-    const hour = new Date().getHours();
-    
-    // Simulate realistic usage patterns based on time of day
-    let multiplier = 1;
-    if (hour >= 9 && hour <= 17) {
-      multiplier = 1.4; // Higher during business hours
-    } else if (hour >= 19 && hour <= 22) {
-      multiplier = 1.6; // Peak evening study time
-    } else if (hour >= 0 && hour <= 6) {
-      multiplier = 0.6; // Lower during night hours
+  generateUserId() {
+    return 'user_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+  }
+  
+  initFirebase() {
+    try {
+      // Initialize Firebase
+      if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+      }
+      
+      this.database = firebase.database();
+      this.usersRef = this.database.ref('activeUsers');
+      this.userRef = this.usersRef.child(this.userId);
+      
+      this.setupUserPresence();
+      this.listenToUserCount();
+      
+    } catch (error) {
+      console.log('Firebase not configured yet. Using fallback counter.');
+      this.fallbackCounter();
     }
-    
-    const variation = Math.random() * this.maxVariation - (this.maxVariation / 2);
-    const count = Math.round((this.baseUsers + variation) * multiplier);
-    
-    return Math.max(12, count); // Minimum of 12 users
   }
   
-  updateCount() {
-    const currentCount = parseInt(this.countElement.textContent);
-    const newCount = this.generateRealisticCount();
+  setupUserPresence() {
+    // Set user as online
+    this.userRef.set({
+      online: true,
+      timestamp: firebase.database.ServerValue.TIMESTAMP,
+      userAgent: navigator.userAgent.substring(0, 100) // First 100 chars for privacy
+    });
     
-    // Animate the change
-    this.animateCountChange(currentCount, newCount);
+    // Remove user when they disconnect
+    this.userRef.onDisconnect().remove();
+    
+    // Handle page visibility changes
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        this.userRef.set({
+          online: false,
+          timestamp: firebase.database.ServerValue.TIMESTAMP
+        });
+      } else {
+        this.userRef.set({
+          online: true,
+          timestamp: firebase.database.ServerValue.TIMESTAMP,
+          userAgent: navigator.userAgent.substring(0, 100)
+        });
+      }
+    });
+    
+    // Clean up when page unloads
+    window.addEventListener('beforeunload', () => {
+      this.userRef.remove();
+    });
+  }
+  
+  listenToUserCount() {
+    this.usersRef.on('value', (snapshot) => {
+      let activeCount = 0;
+      const currentTime = Date.now();
+      
+      snapshot.forEach((userSnapshot) => {
+        const userData = userSnapshot.val();
+        if (userData.online) {
+          // Only count users active in the last 5 minutes
+          const userTime = userData.timestamp || 0;
+          if (currentTime - userTime < 300000) { // 5 minutes
+            activeCount++;
+          }
+        }
+      });
+      
+      // Ensure minimum of 1 user (the current user)
+      activeCount = Math.max(1, activeCount);
+      
+      this.updateDisplay(activeCount);
+    });
+    
+    // Clean up old/inactive users every 2 minutes
+    setInterval(() => {
+      this.cleanupInactiveUsers();
+    }, 120000);
+  }
+  
+  cleanupInactiveUsers() {
+    const currentTime = Date.now();
+    this.usersRef.once('value', (snapshot) => {
+      snapshot.forEach((userSnapshot) => {
+        const userData = userSnapshot.val();
+        const userTime = userData.timestamp || 0;
+        
+        // Remove users inactive for more than 10 minutes
+        if (currentTime - userTime > 600000) {
+          userSnapshot.ref.remove();
+        }
+      });
+    });
+  }
+  
+  updateDisplay(count) {
+    const currentCount = parseInt(this.countElement.textContent) || 0;
+    
+    if (currentCount !== count) {
+      this.animateCountChange(currentCount, count);
+    }
   }
   
   animateCountChange(from, to) {
@@ -1357,19 +1451,28 @@ class ActiveUsersCounter {
     }, 50);
   }
   
-  startCounter() {
-    // Set initial count
-    this.countElement.textContent = this.generateRealisticCount();
+  // Fallback for when Firebase isn't configured
+  fallbackCounter() {
+    console.log('Using fallback counter - please configure Firebase for real-time users');
+    this.countElement.textContent = '1'; // Show at least current user
     
-    // Update periodically
+    // Simple increment/decrement to simulate activity
     setInterval(() => {
-      this.updateCount();
-    }, this.updateInterval);
+      const current = parseInt(this.countElement.textContent);
+      const change = Math.random() > 0.5 ? 1 : -1;
+      const newCount = Math.max(1, Math.min(50, current + change));
+      this.countElement.textContent = newCount;
+    }, 15000);
+  }
+  
+  // Public method to get current count
+  getCurrentCount() {
+    return parseInt(this.countElement.textContent) || 0;
   }
 }
 
 // Initialize the quiz app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   new QuizApp();
-  new ActiveUsersCounter();
+  new RealTimeUsersCounter();
 });
