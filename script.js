@@ -966,6 +966,579 @@ const questionDatabase = [
     ],
     answer: "Business obligation to consider impact on society and environment",
     explanation: "Corporate social responsibility involves businesses considering their broader impact on society, environment, and stakeholders beyond just profit maximization."
+  },
+
+  // Legal Rules - Romanian Civil Law
+  {
+    category: "Legal Rules",
+    question: "The legal rule \"Marriage may be concluded if the future spouses have reached the age of 18 years.\" [Art. 272 paragraph 1 of the Civil Code] is:",
+    options: [
+      "suppletive (complementary)",
+      "permissive",
+      "operative (imposed)",
+      "prohibitive"
+    ],
+    answer: "permissive",
+    explanation: "This rule allows marriage if the condition is met, making it a permissive rule that grants permission rather than imposing an obligation."
+  },
+  {
+    category: "Legal Rules",
+    question: "The Emergency Ordinances are issued by:",
+    options: [
+      "the President",
+      "the Parliament",
+      "the Government",
+      "the Constituent Assembly"
+    ],
+    answer: "the Government",
+    explanation: "Emergency Ordinances are issued by the Government in exceptional situations when Parliament is not in session."
+  },
+  {
+    category: "Legal Rules",
+    question: "A law adopted by the Parliament comes into force:",
+    options: [
+      "at the publication date in the Official Gazette",
+      "3 days after the publication in the Official Gazette, unless the very text mentions another subsequent date for entry into force",
+      "30 days after the publication in the Official Gazette, unless the very text mentions another subsequent date for entry into force",
+      "at its promulgation date by the President"
+    ],
+    answer: "3 days after the publication in the Official Gazette, unless the very text mentions another subsequent date for entry into force",
+    explanation: "Romanian law enters into force 3 days after publication in the Official Gazette, unless the law specifies a different date."
+  },
+  {
+    category: "Legal Rules",
+    question: "The State must take measures to ensure economic growth and social development, the well-being of the citizens is protected, guaranteed to work [Art. 47 paragraph (1) of the Constitution] is:",
+    options: [
+      "suppletive (complementary)",
+      "permissive",
+      "operative (imposed)"
+    ],
+    answer: "operative (imposed)",
+    explanation: "This constitutional provision imposes obligations on the State, making it an operative (imposed) rule."
+  },
+  {
+    category: "Legal Rules",
+    question: "The supreme legal norm (law) in the State is:",
+    options: [
+      "the Fiscal Code",
+      "the Constitution",
+      "the Criminal Code",
+      "the Civil Code"
+    ],
+    answer: "the Constitution",
+    explanation: "The Constitution is the supreme law of any state, taking precedence over all other legal norms."
+  },
+  {
+    category: "Legal Rules",
+    question: "The more favourable criminal law is an application of:",
+    options: [
+      "the principle of the immediate application of the new law",
+      "the principle of non-retroactivity of the law",
+      "exception of the principle of non-activity of the law"
+    ],
+    answer: "the principle of non-retroactivity of the law",
+    explanation: "The application of more favorable criminal law is an exception to the general principle of non-retroactivity."
+  },
+  {
+    category: "Legal Rules",
+    question: "It comprises legal norms concerning the system of taxes due to the state:",
+    options: [
+      "constitutional law",
+      "fiscal law",
+      "family law",
+      "administrative law"
+    ],
+    answer: "fiscal law",
+    explanation: "Fiscal law specifically deals with the legal framework for taxation and tax obligations."
+  },
+  {
+    category: "Legal Rules",
+    question: "The supreme law of the Romanian state is:",
+    options: [
+      "Civil Code",
+      "Constitution",
+      "Criminal Code",
+      "Fiscal Code"
+    ],
+    answer: "Constitution",
+    explanation: "The Constitution is the fundamental law that establishes the basic principles and structure of the Romanian state."
+  },
+  {
+    category: "Legal Rules",
+    question: "The law enters in force:",
+    options: [
+      "at the publication in the Official Journal",
+      "3 days after the publication in the Official Journal or at a later date stipulated in that law",
+      "30 days after the publication in the Official Monitor"
+    ],
+    answer: "3 days after the publication in the Official Journal or at a later date stipulated in that law",
+    explanation: "Romanian law becomes effective 3 days after official publication, unless the law itself specifies a different effective date."
+  },
+  {
+    category: "Legal Rules",
+    question: "The most favorable criminal law is an application of:",
+    options: [
+      "principle of non-retroactivity of the new law",
+      "principle of immediate application of the law",
+      "exception of retroactivity"
+    ],
+    answer: "exception of retroactivity",
+    explanation: "When a new criminal law is more favorable to the defendant, it can be applied retroactively as an exception to the non-retroactivity principle."
+  },
+  {
+    category: "Legal Rules",
+    question: "The legal rule contains:",
+    options: [
+      "the provision",
+      "the object",
+      "the parties"
+    ],
+    answer: "the provision",
+    explanation: "A legal rule contains a provision that establishes the legal norm or regulation."
+  },
+  {
+    category: "Legal Rules",
+    question: "The law applicable to an immovable is:",
+    options: [
+      "the law of the state where the immovable is located in",
+      "the law chosen by the owner",
+      "the law of the owner's citizenship"
+    ],
+    answer: "the law of the state where the immovable is located in",
+    explanation: "Immovable property is governed by the law of the country where it is situated (lex rei sitae)."
+  },
+
+  // Legal Relations and Capacity
+  {
+    category: "Legal Relations",
+    question: "Which of the below is not a constituent element of the legal entity:",
+    options: [
+      "the self-standing organization",
+      "own patrimony",
+      "share capital",
+      "lawful and moral purpose"
+    ],
+    answer: "share capital",
+    explanation: "Share capital is specific to corporations, not a general requirement for all legal entities."
+  },
+  {
+    category: "Legal Relations",
+    question: "The limited capacity of exercise starts:",
+    options: [
+      "at the age of 18",
+      "at the age of 16",
+      "at the age of 14",
+      "at birth"
+    ],
+    answer: "at the age of 14",
+    explanation: "Limited capacity of exercise begins at age 14, allowing minors to perform certain legal acts with restrictions."
+  },
+  {
+    category: "Legal Relations",
+    question: "The capacity of use starts:",
+    options: [
+      "at the age of 18",
+      "at the age of 16",
+      "at the age of 14",
+      "at birth"
+    ],
+    answer: "at birth",
+    explanation: "The capacity to have rights (capacity of use) begins at birth for natural persons."
+  },
+  {
+    category: "Legal Relations",
+    question: "The legal relationship is:",
+    options: [
+      "only patrimonial",
+      "only non-patrimonial",
+      "established by the will of parties"
+    ],
+    answer: "established by the will of parties",
+    explanation: "Legal relationships can be established by the will of the parties, though they can also arise from law or other sources."
+  },
+  {
+    category: "Legal Relations",
+    question: "The full capacity to act is acquired:",
+    options: [
+      "only at 18 years",
+      "also at 16 years by marriage",
+      "by birth"
+    ],
+    answer: "also at 16 years by marriage",
+    explanation: "Full legal capacity is normally acquired at 18, but can also be acquired at 16 through marriage."
+  },
+  {
+    category: "Legal Relations",
+    question: "The limited capacity to act starts at the age of:",
+    options: [
+      "14",
+      "16",
+      "18"
+    ],
+    answer: "14",
+    explanation: "Limited capacity to act begins at 14, allowing minors to perform certain legal actions with parental consent or court approval."
+  },
+
+  // Property Law
+  {
+    category: "Property Law",
+    question: "Which of the following is an immovable good:",
+    options: [
+      "Arcul de Triumf (the Triumphal Arch) located in Bucharest",
+      "electromagnetic waves",
+      "electric energy",
+      "money"
+    ],
+    answer: "Arcul de Triumf (the Triumphal Arch) located in Bucharest",
+    explanation: "Buildings and structures permanently attached to land are immovable property."
+  },
+  {
+    category: "Property Law",
+    question: "The rent is:",
+    options: [
+      "a natural fruit",
+      "an industrial fruit",
+      "civil fruit",
+      "none of the above"
+    ],
+    answer: "civil fruit",
+    explanation: "Rent is income derived from property without consuming the property itself, making it a civil fruit."
+  },
+  {
+    category: "Property Law",
+    question: "Which of the following is the immovable good:",
+    options: [
+      "the main building of ASE",
+      "the electric energy",
+      "a car"
+    ],
+    answer: "the main building of ASE",
+    explanation: "Buildings are immovable property as they are permanently attached to land."
+  },
+  {
+    category: "Property Law",
+    question: "The interest is:",
+    options: [
+      "a natural fruit",
+      "an industrial fruit",
+      "a civil fruit"
+    ],
+    answer: "a civil fruit",
+    explanation: "Interest earned on money or investments is considered a civil fruit as it represents income from capital."
+  },
+
+  // Rights Classification
+  {
+    category: "Rights Classification",
+    question: "The right to have a name:",
+    options: [
+      "a non-patrimonial right",
+      "a patrimonial right",
+      "a debt right",
+      "a real debt"
+    ],
+    answer: "a non-patrimonial right",
+    explanation: "The right to a name is a personal right that cannot be valued in money terms, making it non-patrimonial."
+  },
+  {
+    category: "Rights Classification",
+    question: "The ownership right is:",
+    options: [
+      "a non-patrimonial right",
+      "an ancillary right",
+      "an absolute right",
+      "a personal right"
+    ],
+    answer: "an absolute right",
+    explanation: "Ownership is an absolute right that can be exercised against all other persons (erga omnes)."
+  },
+  {
+    category: "Rights Classification",
+    question: "The right to education is:",
+    options: [
+      "a patrimonial right",
+      "a non-patrimonial right",
+      "an ancillary right",
+      "none of the above"
+    ],
+    answer: "a non-patrimonial right",
+    explanation: "The right to education is a fundamental personal right that cannot be valued in monetary terms."
+  },
+
+  // Obligations
+  {
+    category: "Obligations",
+    question: "Delivery of the good in a sale contract is:",
+    options: [
+      "an obligation of giving",
+      "an obligation of doing",
+      "an obligation of not doing",
+      "is not an obligation"
+    ],
+    answer: "an obligation of doing",
+    explanation: "Delivery involves performing an action (transferring possession), making it an obligation of doing."
+  },
+  {
+    category: "Obligations",
+    question: "Transferring the ownership right in favor of the creditor is:",
+    options: [
+      "an obligation of giving",
+      "an obligation of doing",
+      "an obligation of not doing",
+      "is not an obligation"
+    ],
+    answer: "an obligation of giving",
+    explanation: "Transferring ownership involves giving a legal right to another party, constituting an obligation of giving."
+  },
+
+  // Business Organizations and Professionals
+  {
+    category: "Business Organizations",
+    question: "They are considered professionals:",
+    options: [
+      "all legal persons",
+      "those which operate (exploit) an undertaking",
+      "only authorized natural persons, individual undertakings and family undertakings"
+    ],
+    answer: "those which operate (exploit) an undertaking",
+    explanation: "Professionals are defined as those who operate an undertaking or business activity in an organized manner."
+  },
+  {
+    category: "Business Organizations",
+    question: "It cannot hire personnel with individual employment contract:",
+    options: [
+      "the authorized natural person (P.F.A)",
+      "the holder of an individual undertaking",
+      "the representative of a family undertaking"
+    ],
+    answer: "the representative of a family undertaking",
+    explanation: "Family undertakings can only use family members, not hired employees with individual employment contracts."
+  },
+  {
+    category: "Business Organizations",
+    question: "The authorized natural person (PFA) may:",
+    options: [
+      "hire up to 8 people",
+      "hire up to 3 people",
+      "perform up to 10 classes of activities",
+      "has legal personality"
+    ],
+    answer: "hire up to 3 people",
+    explanation: "An authorized natural person (PFA) is limited to hiring a maximum of 3 employees."
+  },
+  {
+    category: "Business Organizations",
+    question: "Which company has the minimum share capital of 90.000 lei:",
+    options: [
+      "general partnership",
+      "limited partnership",
+      "joint stock company",
+      "limited liability company"
+    ],
+    answer: "joint stock company",
+    explanation: "Joint stock companies (SA) require a minimum share capital of 90,000 RON under Romanian law."
+  },
+  {
+    category: "Business Organizations",
+    question: "It is a professional, as provided by the Civil Code:",
+    options: [
+      "Bucharest City Hall",
+      "ASE",
+      "Ilfov Country Court"
+    ],
+    answer: "ASE",
+    explanation: "Universities like ASE (Academy of Economic Studies) operate undertakings and are considered professionals under the Civil Code."
+  },
+  {
+    category: "Business Organizations",
+    question: "The authorized natural person (P.F.A) may:",
+    options: [
+      "may collaborate with representatives of family undertakings",
+      "has legal personality",
+      "cannot be an employee in the same time",
+      "has no obligation of registration at the Trade Registry"
+    ],
+    answer: "may collaborate with representatives of family undertakings",
+    explanation: "Authorized natural persons can collaborate with family undertaking representatives in business activities."
+  },
+  {
+    category: "Business Organizations",
+    question: "The holder of an individual undertaking may:",
+    options: [
+      "hire up to 8 people",
+      "perform up to 5 classes of activities",
+      "hire up to 3 people",
+      "not hire personnel"
+    ],
+    answer: "hire up to 8 people",
+    explanation: "Individual undertaking holders can hire up to 8 employees under Romanian business law."
+  },
+  {
+    category: "Business Organizations",
+    question: "Affectio societatis is:",
+    options: [
+      "the intention of the shareholders to operate and participate in the performance of the company's economic activity",
+      "the contribution of each shareholder to the share capital",
+      "the dividend"
+    ],
+    answer: "the intention of the shareholders to operate and participate in the performance of the company's economic activity",
+    explanation: "Affectio societatis refers to the shared intention of partners/shareholders to work together in a business venture."
+  },
+  {
+    category: "Business Organizations",
+    question: "They are professionals according to the provisions of the Civil Code, but they are not traders:",
+    options: [
+      "individuals who joined a liberal profession",
+      "the companies regulated by Law no. 31/1990",
+      "family undertakings",
+      "associations regulated by G.O, no. 26/2000"
+    ],
+    answer: "individuals who joined a liberal profession",
+    explanation: "Liberal professionals (lawyers, doctors, etc.) are considered professionals but not commercial traders."
+  },
+  {
+    category: "Business Organizations",
+    question: "They are professionals:",
+    options: [
+      "city hall",
+      "hospitals",
+      "universities",
+      "courts of law"
+    ],
+    answer: "universities",
+    explanation: "Universities operate economic activities and undertakings, making them professionals under civil law."
+  },
+  {
+    category: "Business Organizations",
+    question: "In accordance with E.G.O. no. 44/2008 an individual cannot be registered as:",
+    options: [
+      "authorized natural person (P.F.A) and representative of a family undertaking",
+      "individual enterprise and authorized natural person (P.F.A.)",
+      "individual enterprise and member of a family undertaking"
+    ],
+    answer: "individual enterprise and authorized natural person (P.F.A.)",
+    explanation: "Romanian law prohibits simultaneous registration as both an individual enterprise and authorized natural person."
+  },
+  {
+    category: "Business Organizations",
+    question: "In case of a family undertaking:",
+    options: [
+      "the members have limited liability for the debts of the undertaking",
+      "the members have joint liability with the undertaking (patrimony of appropriation) if formed, as well as with their entire patrimony if undertaking (the patrimony of appropriation) is not formed or it is not sufficient for the debts of the undertaking",
+      "the representative is the only liable person for the debts of the undertaking"
+    ],
+    answer: "the members have joint liability with the undertaking (patrimony of appropriation) if formed, as well as with their entire patrimony if undertaking (the patrimony of appropriation) is not formed or it is not sufficient for the debts of the undertaking",
+    explanation: "Family undertaking members have unlimited joint liability for business debts, both with the business assets and their personal assets."
+  },
+
+  // Contract Law
+  {
+    category: "Contracts",
+    question: "The donation contract is:",
+    options: [
+      "consensual",
+      "solemn",
+      "innominate",
+      "by onerous title"
+    ],
+    answer: "solemn",
+    explanation: "Donation contracts require specific formal procedures to be valid, making them solemn contracts."
+  },
+  {
+    category: "Contracts",
+    question: "The lease contract is:",
+    options: [
+      "solemn",
+      "aleatory",
+      "patrimonial",
+      "unilateral"
+    ],
+    answer: "patrimonial",
+    explanation: "Lease contracts involve economic value and financial obligations, making them patrimonial contracts."
+  },
+  {
+    category: "Contracts",
+    question: "The sale contract of a house is:",
+    options: [
+      "ancillary",
+      "aleatory",
+      "by gratuitous title",
+      "solemn"
+    ],
+    answer: "solemn",
+    explanation: "Real estate sales require formal procedures and notarization, making them solemn contracts."
+  },
+  {
+    category: "Contracts",
+    question: "The validity requirements of a juridical act are:",
+    options: [
+      "capacity and consent",
+      "object and cause",
+      "capacity, consent, object, cause"
+    ],
+    answer: "capacity, consent, object, cause",
+    explanation: "All four elements (capacity, consent, object, and cause) are required for a valid juridical act."
+  },
+  {
+    category: "Contracts",
+    question: "The contract has the force of law according to the principle of:",
+    options: [
+      "the binding force",
+      "irrevocability",
+      "the relativity of contracts"
+    ],
+    answer: "the binding force",
+    explanation: "The binding force principle means contracts have the force of law between the contracting parties."
+  },
+
+  // Contract Formation Cases
+  {
+    category: "Contract Formation",
+    question: "AB S.R.L. is a metal broker and it is in negotiations with three parties for the sale of copper. It wrote to DE S.R.L. offering the copper at $5,000 per tonne over 100 tonnes for delivery to be made before 1 April. DE S.R.L. wrote back ordering 80 tonnes for delivery on 30 March. AB S.R.L. wrote to GH S.A. offering 100 tonnes of copper at $5,500 per tonne for orders placed before 1 May. GH S.A. wrote back ordering 150 tonnes at the agreed price for delivery on 30 April. AB S.R.L. wrote to JK S.A. offering copper at $5,750 per tonne and JK S.A. wrote back ordering 150 tonnes for delivery on 1 May. The answer given by DE S.R.L. to AB S.R.L. is:",
+    options: [
+      "an invitation to negotiate",
+      "an offer",
+      "a counter-offer",
+      "a withdrawal"
+    ],
+    answer: "a counter-offer",
+    explanation: "DE S.R.L. changed the terms (80 tonnes instead of 100, specific delivery date), making it a counter-offer rather than acceptance."
+  },
+  {
+    category: "Contract Formation",
+    question: "AB S.R.L. is a metal broker and it is in negotiations with three parties for the sale of copper. It wrote to DE S.R.L. offering the copper at $5,000 per tonne over 100 tonnes for delivery to be made before 1 April. DE S.R.L. wrote back ordering 80 tonnes for delivery on 30 March. AB S.R.L. wrote to GH S.A. offering 100 tonnes of copper at $5,500 per tonne for orders placed before 1 May. GH S.A. wrote back ordering 150 tonnes at the agreed price for delivery on 30 April. AB S.R.L. wrote to JK S.A. offering copper at $5,750 per tonne and JK S.A. wrote back ordering 150 tonnes for delivery on 1 May. The answer given by GH S.A. to AB S.R.L. is:",
+    options: [
+      "an invitation to negotiate",
+      "an offer",
+      "a counter-offer",
+      "a withdrawal"
+    ],
+    answer: "an offer",
+    explanation: "GH S.A. responded to an invitation (no specific quantity mentioned in original) by making a definite offer for 150 tonnes."
+  },
+  {
+    category: "Contract Formation",
+    question: "AB S.R.L. is a metal broker and it is in negotiations with three parties for the sale of copper. It wrote to DE S.R.L. offering the copper at $5,000 per tonne over 100 tonnes for delivery to be made before 1 April. DE S.R.L. wrote back ordering 80 tonnes for delivery on 30 March. AB S.R.L. wrote to GH S.A. offering 100 tonnes of copper at $5,500 per tonne for orders placed before 1 May. GH S.A. wrote back ordering 150 tonnes at the agreed price for delivery on 30 April. AB S.R.L. wrote to JK S.A. offering copper at $5,750 per tonne and JK S.A. wrote back ordering 150 tonnes for delivery on 1 May. The letter sent by AB S.R.L. to JK S.A. is:",
+    options: [
+      "an invitation to negotiate",
+      "an offer",
+      "a counter-offer",
+      "a withdrawal"
+    ],
+    answer: "an invitation to negotiate",
+    explanation: "AB S.R.L.'s letter to JK S.A. lacked specific quantity terms, making it an invitation to negotiate rather than a definite offer."
+  },
+  {
+    category: "Contract Formation",
+    question: "AB S.R.L. is a metal broker and it is in negotiations with three parties for the sale of copper. It wrote to DE S.R.L. offering the copper at $5,000 per tonne over 100 tonnes for delivery to be made before 1 April. DE S.R.L. wrote back ordering 80 tonnes for delivery on 30 March. AB S.R.L. wrote to GH S.A. offering 100 tonnes of copper at $5,500 per tonne for orders placed before 1 May. GH S.A. wrote back ordering 150 tonnes at the agreed price for delivery on 30 April. AB S.R.L. wrote to JK S.A. offering copper at $5,750 per tonne and JK S.A. wrote back ordering 150 tonnes for delivery on 1 May. The answer given by JK S.A. to AB S.R.L. is:",
+    options: [
+      "an invitation to negotiate",
+      "an offer",
+      "a counter-offer",
+      "a withdrawal"
+    ],
+    answer: "an offer",
+    explanation: "JK S.A. responded to an invitation to negotiate by making a definite offer with specific terms (150 tonnes, delivery date)."
   }
 ];
 
