@@ -17,10 +17,10 @@ const questionDatabase = [
     category: "Introduction to Business Law",
     question: "Which of the following is NOT a source of business law?",
     options: [
-      "Constitutional law",
-      "Statutory law",
-      "Case law",
-      "Personal opinions"
+      "Constitutional law and all federal constitutional amendments",
+      "Statutory law and legislative enactments at all levels",
+      "Personal opinions",
+      "Case law"
     ],
     answer: "Personal opinions",
     explanation: "Sources of business law include constitutional law, statutory law, administrative regulations, and case law. Personal opinions are not legally binding sources of law."
@@ -29,12 +29,12 @@ const questionDatabase = [
     category: "Introduction to Business Law",
     question: "What is the difference between civil law and criminal law in business context?",
     options: [
-      "Civil law deals with private disputes, criminal law deals with offenses against society",
-      "Civil law applies only to contracts, criminal law applies to all business activities",
-      "There is no difference between civil and criminal law",
-      "Civil law is federal, criminal law is state-based"
+      "Civil law applies only to contractual disputes while criminal law encompasses all business regulatory violations",
+      "No difference",
+      "Civil law is federal jurisdiction, criminal law is exclusively state-based enforcement",
+      "Civil: private disputes, Criminal: societal offenses"
     ],
-    answer: "Civil law deals with private disputes, criminal law deals with offenses against society",
+    answer: "Civil: private disputes, Criminal: societal offenses",
     explanation: "Civil law governs disputes between private parties (like breach of contract), while criminal law addresses offenses against society (like fraud or embezzlement)."
   },
 
@@ -55,24 +55,24 @@ const questionDatabase = [
     category: "Legal Rules",
     question: "What is the hierarchy of laws in most legal systems?",
     options: [
-      "Constitution, statutes, regulations, case law",
-      "Case law, statutes, constitution, regulations",
+      "Case law precedents, statutory enactments, constitutional provisions, administrative regulations",
+      "Constitution first",
       "Regulations, constitution, statutes, case law",
       "Statutes, case law, constitution, regulations"
     ],
-    answer: "Constitution, statutes, regulations, case law",
+    answer: "Constitution first",
     explanation: "The legal hierarchy typically places constitutional law at the top, followed by statutory law, administrative regulations, and case law precedents."
   },
   {
     category: "Legal Rules",
     question: "What is the doctrine of precedent (stare decisis)?",
     options: [
-      "Courts must follow decisions of higher courts in similar cases",
-      "All court decisions are temporary and can be ignored",
-      "Only constitutional courts can create binding precedents",
-      "Precedents apply only to criminal cases"
+      "All court decisions are temporary in nature and can be completely ignored by future courts",
+      "Only constitutional courts and supreme judicial authorities can create legally binding precedents",
+      "Follow higher court decisions",
+      "Precedents apply exclusively to criminal cases and have no civil application"
     ],
-    answer: "Courts must follow decisions of higher courts in similar cases",
+    answer: "Follow higher court decisions",
     explanation: "Stare decisis means 'let the decision stand' - it requires lower courts to follow precedents set by higher courts in similar cases."
   },
 
@@ -81,36 +81,36 @@ const questionDatabase = [
     category: "Legal Relations",
     question: "What constitutes a legal relationship?",
     options: [
-      "A connection between legal subjects involving rights and obligations",
-      "Any friendship between business partners",
-      "A formal written agreement only",
-      "A relationship approved by government"
+      "Any friendship or personal relationship that exists between business partners regardless of legal context",
+      "Rights and duties connection",
+      "A formal written agreement that has been notarized and filed with government authorities",
+      "Government approved relationship"
     ],
-    answer: "A connection between legal subjects involving rights and obligations",
+    answer: "Rights and duties connection",
     explanation: "A legal relationship exists when there is a legally recognized connection between parties that creates rights for one party and corresponding obligations for another."
   },
   {
     category: "Legal Relations",
     question: "Who can be a legal subject in business law?",
     options: [
-      "Natural persons and legal persons (corporations)",
-      "Only natural persons",
-      "Only registered corporations",
-      "Only government entities"
+      "Only natural persons who have reached the age of majority and possess full legal capacity",
+      "Only registered corporations that have been formally incorporated under state or federal law",
+      "People and entities",
+      "Only government entities and their authorized representatives"
     ],
-    answer: "Natural persons and legal persons (corporations)",
+    answer: "People and entities",
     explanation: "Legal subjects include natural persons (individuals) and legal persons (corporations, partnerships, etc.) who can hold rights and bear obligations."
   },
   {
     category: "Legal Relations",
     question: "What is legal capacity?",
     options: [
-      "The ability to hold rights and assume obligations",
-      "The ability to understand legal documents",
-      "The ability to hire a lawyer",
-      "The ability to attend court proceedings"
+      "The ability to understand complex legal documents and their implications in various business contexts",
+      "The ability to hire qualified legal representation and provide adequate compensation for services",
+      "Hold rights and duties",
+      "The ability to attend court proceedings and participate effectively in legal processes"
     ],
-    answer: "The ability to hold rights and assume obligations",
+    answer: "Hold rights and duties",
     explanation: "Legal capacity refers to a legal subject's ability to possess legal rights and be bound by legal obligations under the law."
   },
 
@@ -143,24 +143,24 @@ const questionDatabase = [
     category: "Contracts",
     question: "What makes a contract void?",
     options: [
-      "Illegal purpose, lack of capacity, or duress",
-      "Lack of written form",
-      "Absence of witnesses",
-      "Failure to register with authorities"
+      "Lack of written form and proper documentation according to statute of frauds requirements",
+      "Absence of witnesses during the contract formation and execution process",
+      "Illegal acts",
+      "Failure to register with appropriate government authorities within specified time limits"
     ],
-    answer: "Illegal purpose, lack of capacity, or duress",
+    answer: "Illegal acts",
     explanation: "Contracts are void when they involve illegal activities, when parties lack legal capacity, or when formed under duress or undue influence."
   },
   {
     category: "Contracts",
     question: "What is breach of contract?",
     options: [
-      "Failure to perform contractual obligations without legal excuse",
-      "Disagreement about contract terms",
-      "Renegotiation of contract terms",
-      "Delay in contract performance"
+      "Disagreement about specific contract terms and their interpretation in various business contexts",
+      "Renegotiation of existing contract terms to reflect changing market conditions and business needs",
+      "Non-performance",
+      "Delay in contract performance due to unforeseen circumstances or logistical challenges"
     ],
-    answer: "Failure to perform contractual obligations without legal excuse",
+    answer: "Non-performance",
     explanation: "Breach of contract occurs when a party fails to fulfill their contractual obligations without legal justification."
   },
 
@@ -169,12 +169,12 @@ const questionDatabase = [
     category: "Legal Professionals",
     question: "What is the primary role of a lawyer in business transactions?",
     options: [
-      "To provide legal advice and ensure compliance with law",
-      "To make business decisions for clients",
-      "To guarantee business success",
-      "To eliminate all legal risks"
+      "To make all important business decisions for clients and assume full responsibility for outcomes",
+      "To guarantee business success and profitability through legal expertise and strategic planning",
+      "Legal advice",
+      "To eliminate all possible legal risks and provide absolute protection from any liability"
     ],
-    answer: "To provide legal advice and ensure compliance with law",
+    answer: "Legal advice",
     explanation: "Lawyers advise clients on legal matters, help ensure compliance with applicable laws, and assist in structuring transactions to minimize legal risks."
   },
   {
@@ -207,12 +207,12 @@ const questionDatabase = [
     category: "Business Organizations",
     question: "What is the main advantage of incorporating a business?",
     options: [
-      "Limited liability protection for owners",
-      "Elimination of all taxes",
-      "Guaranteed business success",
-      "Simplified business operations"
+      "Complete elimination of all federal, state, and local taxes on business income and profits",
+      "Guaranteed business success and profitability through corporate structure and legal protections",
+      "Limited liability",
+      "Simplified business operations with reduced regulatory compliance and reporting requirements"
     ],
-    answer: "Limited liability protection for owners",
+    answer: "Limited liability",
     explanation: "Incorporation creates a separate legal entity, protecting owners' personal assets from business debts and liabilities."
   },
   {
