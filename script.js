@@ -543,7 +543,306 @@ const questionDatabase = [
     "4. Rezultatul / rezultatele lui C este / sunt permutare / permutări"
   ],
   "explanation": "Operatorul C este unar, dar afirmația importantă este că rezultatul este tot o permutare (4), mutația se definește pe baza a două gene (2), și unele mutații păstrează dimensiunea dar pot părea diferite logic — totuși, în contextul dat, afirmația 3 este considerată corectă în test."
-}
+},
+[
+  {
+    "category": "Genetic Algorithms",
+    "question": "Fie permutările p1=(3, 5, 4, 2, 1, 7, 8, 6) și p2=(1, 6, 7, 2, 3, 4, 5, 8). Rezultatul OCX(p1, p2) pentru secvența de recombinare i=2, j=5 este:",
+    "options": [
+      "O secvență descrescătoare de numere 1…8 cu posibile duplicate",
+      "O permutare a mulțimii 1…8",
+      "Nici unul din celelalte răspunsuri",
+      "O secvență oarecare de numere 1…8 cu posibile duplicate",
+      "O secvență crescătoare de numere 1…8 cu posibile duplicate"
+    ],
+    "answer": "O permutare a mulțimii 1…8",
+    "explanation": "OCX (Order Crossover) produce o permutare validă atunci când este aplicată pe permutări. Rezultatul este o permutare a numerelor 1 până la 8 fără duplicate."
+  }
+],
+[
+  {
+    "category": "Genetic Algorithms - Mutation",
+    "question": "Fie permutarea p=(11, 12, 8, 3, 5, 4, 9, 2, 1, 7, 10, 6) și rezultatul mutației prin interschimbare q=(11, 12, 8, 3, 5, 4, 9, 2, 1, 10, 7, 6). Prima poziție în permutare este codificată cu 1. Alegeți variantele corecte:",
+    "options": [
+      "1. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inversiune cu (10, 11) are același efect",
+      "2. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inversiune cu (10, 11) are efect diferit",
+      "3. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inserare cu (10, 11) are același efect",
+      "4. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inserare cu (10, 11) are efect diferit"
+    ],
+    "answer": "1 și 4",
+    "explanation": "Mutația prin interschimbare inversează elementele de pe pozițiile indicate. Inversiunea poate da același rezultat în unele cazuri, dar inserarea are comportament diferit, deci afirmațiile 1 și 4 sunt corecte."
+  }
+],
+[
+  {
+    "category": "Genetic Algorithms - Initial Population",
+    "question": "Într-un algoritm genetic, populația inițială este",
+    "options": [
+      "generată aleator, la începutul căutării",
+      "calculată în ciclul evolutiv, la fiecare pas",
+      "nici unul din celelalte răspunsuri",
+      "parametru de intrare",
+      "dată de ieșire"
+    ],
+    "answer": "generată aleator, la începutul căutării",
+    "explanation": "În algoritmii genetici, populația inițială este de obicei generată aleator la începutul procesului de căutare pentru a asigura diversitatea genetică."
+  }
+],
+[
+  {
+    "category": "Genetic Algorithms - Mutation",
+    "question": "Într-un algoritm evolutiv, mutația apare",
+    "options": [
+      "nici unul din celelalte răspunsuri",
+      "exclusiv la indivizii cu calitate slabă",
+      "exclusiv la indivizii cu calitate medie",
+      "după încheierea căutării",
+      "după reproducere"
+    ],
+    "answer": "după reproducere",
+    "explanation": "În cadrul algoritmilor evolutivi, operatorul de mutație este aplicat de obicei după reproducere pentru a introduce variație genetică în populația nouă."
+  }
+],
+[
+  {
+    "category": "Genetic Algorithms - Initial Population",
+    "question": "Într-un algoritm genetic, populația inițială:",
+    "options": [
+      "Este generată până când este atins un optim local",
+      "Este construită o singură dată",
+      "Suferă mutație cu o probabilitate relativ mică",
+      "Trebuie modificată la fiecare iterație",
+      "Conține exclusiv indivizi fezabili",
+      "Este formată din indivizii care trec în generația următoare",
+      "Este generată utilizînd distribuția de probabilitate normală"
+    ],
+    "answer": ["2", "5"],
+    "explanation": "Într-un algoritm genetic, populația inițială este de obicei generată o singură dată și conține indivizi fezabili. Nu este construită iterativ și nu se bazează neapărat pe o distribuție normală."
+  }
+],
+[
+  {
+    "category": "Genetic Algorithms - Recombination",
+    "question": "În cadrul unui algoritm genetic operația de recombinare:",
+    "options": [
+      "1. Este efectuată o singură dată pe parcursul unui algoritm genetic",
+      "2. Este efectuată imediat după fiecare etapă de selecție a părinților",
+      "3. În general probabilitatea de recombinare nu contează în rezolvarea problemelor prin algoritmi genetici",
+      "4. Este efectuată imediat înaintea fiecărei proceduri de mutație",
+      "5. Este efectuată imediat înaintea fiecărei etape de selecție a părinților",
+      "6. Utilizează populația inițială",
+      "7. Este utilizată doar în probleme fără constrîngeri",
+      "8. Este utilizată cu probabilitate mare",
+      "9. Este utilizată cu probabilitate mică",
+      "10. Este efectuată o singură dată, după prima etapă de selecție a părinților"
+    ],
+    "answer": ["2", "4", "8"],
+    "explanation": "În algoritmii genetici, recombinarea este de obicei aplicată imediat după selecție, înainte de mutație, și cu o probabilitate mare pentru a explora spațiul soluțiilor."
+  }
+],
+[
+  {
+    "category": "Genetic Algorithms - Binary Representation",
+    "question": "În algoritmii genetici, reprezentarea binară",
+    "options": [
+      "Nu depinde de problema rezolvată",
+      "Nu este utilizată pentru algoritmi genetici",
+      "Este cea mai utilizată variantă de reprezentare a genotipurilor",
+      "Nici unul din celelalte răspunsuri nu este corect",
+      "Duce mereu la rezultate optime"
+    ],
+    "answer": "Nici unul din celelalte răspunsuri nu este corect",
+    "explanation": "Reprezentarea binară nu este întotdeauna cea mai potrivită alegere și nu garantează rezultate optime. Alegerea tipului de reprezentare depinde de problema rezolvată."
+  }
+],
+[
+  {
+    "category": "Genetic Algorithms - Characteristics",
+    "question": "Un algoritm genetic care maximizează o funcție de calitate este:",
+    "options": [
+      "1. stocastic",
+      "2. determinist",
+      "3. bazat pe populații",
+      "4. finit",
+      "5. convergent indiferent de operatorii de variație folosiți",
+      "6. convergent, dacă operatorii de variație folosiți acoperă tot spațiul soluțiilor",
+      "7. independent de reprezentare"
+    ],
+    "answer": ["1. stocastic", "3. bazat pe populații", "4. finit", "6. convergent, dacă operatorii de variație folosiți acoperă tot spațiul soluțiilor"],
+    "explanation": "Un algoritm genetic tipic este stocastic, lucrează pe o populație de soluții, are un număr finit de iterații și converge dacă operatorii pot acoperi întregul spațiu de soluții."
+  }
+],
+[
+  {
+    "category": "Genetic Algorithms - Integer Representation",
+    "question": "În algoritmii genetici, reprezentarea prin șiruri de numere întregi",
+    "options": [
+      "Este doar un exercițiu de implementare, nefiind necesară",
+      "Este preferabilă atunci cînd pentru fiecare genă sînt posibile mai mult de două valori distincte",
+      "Nu poate fi utilizată în cazul atributelor ordinale",
+      "Nu este utilizată în algoritmi genetici",
+      "Este preferabilă pentru problemele de optimizare"
+    ],
+    "answer": "Este preferabilă atunci cînd pentru fiecare genă sînt posibile mai mult de două valori distincte",
+    "explanation": "Reprezentarea cu numere întregi este adecvată pentru gene care pot avea mai multe valori discrete, ceea ce o face potrivită în probleme unde binarul ar fi prea restrictiv."
+  }
+],
+[
+  {
+    "category": "Memetic Algorithms",
+    "question": "Scopul unui algoritm memetic este:",
+    "options": [
+      "de a utiliza factori aleatori",
+      "de a îmbunătăți informația de la o populație la alta",
+      "de a introduce proprietatea de auto-adaptare",
+      "de a îmbunătăți informația din populația curentă prin utilizarea de algoritmi de căutare locală",
+      "de a asigura perpetuarea individului cu calitate maximă din populația curentă",
+      "de a crește calitatea populației curente",
+      "de a procesa separat fiecare iterație",
+      "de a utiliza euristici"
+    ],
+    "answer": ["de a îmbunătăți informația de la o populație la alta", "de a îmbunătăți informația din populația curentă prin utilizarea de algoritmi de căutare locală", "de a crește calitatea populației curente"],
+    "explanation": "Algoritmii memetici combină evoluția globală cu îmbunătățiri locale, scopul fiind să optimizeze mai eficient folosind atât schimb de informație între populații, cât și metode locale de rafinare."
+  }
+],
+[
+  {
+    "category": "Algoritmi Evolutivi",
+    "question": "Într-un algoritm evolutiv, operatorii de variație sunt",
+    "options": [
+      "generarea populației inițiale",
+      "mutația și recombinarea",
+      "selecția generației următoare",
+      "selecția populației de părinți",
+      "nici unul din celelalte răspunsuri"
+    ],
+    "answer": "mutația și recombinarea",
+    "explanation": "În cadrul algoritmilor evolutivi, operatorii de variație sunt folosiți pentru a genera diversitate în populație. Mutația introduce modificări aleatorii, iar recombinarea (sau crossover-ul) combină informația genetică a părinților pentru a produce descendenți noi."
+  }
+],
+[
+  {
+    "category": "Calcul Evolutiv - Tipuri de Probleme",
+    "question": "Tipurile de probleme care pot fi rezolvate pe baza calculului evolutiv sunt:",
+    "options": [
+      "2, 4, 6, 8",
+      "2, 3, 4",
+      "1, 3, 5, 7",
+      "1, 4, 8",
+      "1, 4, 6"
+    ],
+    "answer": "1, 4, 8",
+    "explanation": "Calculul evolutiv este aplicabil în rezolvarea problemelor de optimizare (1), de modelare (4) și de simulare (8), deoarece acestea beneficiază de natura exploratorie și adaptivă a algoritmilor genetici și a metodelor inspirate din evoluția naturală."
+  }
+],
+[
+  {
+    "category": "Strategii Evolutive - Operator de Mutație",
+    "question": "Operatorul de mutație în strategiile evolutive:",
+    "options": [
+      "este de tip neuniform",
+      "este de tip amestec",
+      "este de tip uniform",
+      "este de tip resetare aleatoare",
+      "este de tip inversiune"
+    ],
+    "answer": "este de tip neuniform",
+    "explanation": "În strategiile evolutive, mutația de tip neuniform este preferată deoarece permite o explorare mai largă la începutul procesului evolutiv și o exploatare mai fină pe măsură ce algoritmul converge."
+  }
+],
+[
+  {
+    "category": "Spațiul soluțiilor - Optimizare continuă",
+    "question": "Fie următoarea problemă: minimizează f : [a1,b1] x [a2,b2] x ... x [an,bn] -> R, f(x1, x2, ..., xn) = suma(x1, x2, ..., xn) - produs(x1, x2, ..., xn). Spațiul soluțiilor problemei este",
+    "options": [
+      "mulțimea permutărilor de ordin n",
+      "finit",
+      "mulțimea vectorilor binari de dimensiune n",
+      "infinit",
+      "vid"
+    ],
+    "answer": "infinit",
+    "explanation": "Domeniul de definiție este un produs cartezian de intervale reale, deci conține o infinitate de puncte. Spațiul soluțiilor este astfel infinit."
+  }
+],
+[
+  {
+    "category": "Operatori genetici - CX (Cycle Crossover)",
+    "question": "Fie X = [9, 6, 4, 5, 3, 1, 2, 7, 10, 8], Y = [10, 3, 7, 6, 9, 2, 5, 4, 1, 8] permutări părinte. Care din următoarele perechi de permutări rezultă prin aplicarea procedurii CX?",
+    "options": [
+      "C1 = [6 8 7 10 5 1 9 3 4 2], C2 = [9 1 8 3 6 7 5 10 4 2]",
+      "C1 = [9 6 7 5 3 1 2 4 10 8], C2 = [10 3 4 6 9 2 5 7 1 8]",
+      "C1 = [6 7 8 10 5 1 9 3 4 2], C2 = [9 8 1 3 6 7 5 10 4 2]",
+      "C1 = [8 7 10 5 1 9 3 4 2 6], C2 = [2 9 1 8 3 6 7 5 10 4]",
+      "C1 = X, C2 = Y"
+    ],
+    "answer": "C1 = [6 7 8 10 5 1 9 3 4 2], C2 = [9 8 1 3 6 7 5 10 4 2]",
+    "explanation": "Cycle Crossover (CX) păstrează ciclurile dintr-un părinte și completează restul din celălalt. Aceasta este implementarea corectă conform algoritmului CX."
+  }
+],
+[
+  {
+    "category": "Strategii evolutive generale",
+    "question": "Alegeți varianta corectă. Un algoritm din clasa strategiilor evolutive generale care minimizează o funcție f:",
+    "options": [
+      "Folosește o populație inițială formată din primele elemente din domeniul lui f în ordinea crescătoare a valorilor lui f",
+      "Utilizează întotdeauna reprezentarea prin vectori binari",
+      "Utilizează întotdeauna reprezentarea prin permutări a elementelor din domeniul lui f",
+      "Utilizează întotdeauna reprezentarea prin vectori cu numere reale",
+      "Folosește o populație inițială formată din primele elemente din domeniul lui f în ordinea descrescătoare a valorilor lui f"
+    ],
+    "answer": "Utilizează întotdeauna reprezentarea prin vectori cu numere reale",
+    "explanation": "Algoritmii din clasa strategiilor evolutive generale folosesc reprezentarea real-valued (cu vectori de numere reale) pentru a oferi flexibilitate în optimizarea funcțiilor continue."
+  }
+],
+[
+  {
+    "category": "Funcția fitness în algoritmi genetici",
+    "question": "Dacă f este o funcție care trebuie maximizată, f este cu valori pozitive și este definită pe spațiu continuu, atunci pentru optimizarea lui f cu un algoritm genetic în care poate fi utilizată selecția FPS este utilizată funcția calitate (fitness):",
+    "options": [
+      "1/(1+f)",
+      "1-f",
+      "1/f",
+      "-f",
+      "f"
+    ],
+    "answer": "f",
+    "explanation": "Pentru funcții de maximizat cu valori pozitive și definite pe un spațiu continuu, funcția f este direct folosită ca funcție fitness în selecția FPS (Fitness Proportionate Selection)."
+  }
+],
+[
+  {
+    "category": "Spațiul soluțiilor în probleme de optimizare",
+    "question": "Fie următoarea problemă: minimizează f : [a1,b1] x [a2,b2] x ... x [an,bn] -> R, f(x1, x2, ..., xn) = max(x1, x2, ..., xn) - min(x1, x2, ..., xn). Spațiul soluțiilor problemei este",
+    "options": [
+      "mulțimea vectorilor de dimensiune n, cu valori numere reale conform definiției f",
+      "mulțimea permutărilor de ordin n, conform definiției f",
+      "finit",
+      "mulțimea vectorilor cu numere întregi de dimensiune n conform definiției f",
+      "vid"
+    ],
+    "answer": "mulțimea vectorilor de dimensiune n, cu valori numere reale conform definiției f",
+    "explanation": "Funcția este definită pe un spațiu continuu R^n, deci soluțiile sunt vectori cu valori reale, nu discrete sau permutări. Spațiul este infinit, nu finit."
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
