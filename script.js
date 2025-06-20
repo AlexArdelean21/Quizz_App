@@ -275,7 +275,7 @@ const questionDatabase = [
     "3, 6",
     "1, 8, 9"
   ],
-  answer: "4, 6, 7",
+  answer: "3, 6"",
   explanation: "In evolutionary strategies, recombination may happen once and can generate a large number of offspring. It's also commonly used after the first population is initialized."
 },
 {
