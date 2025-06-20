@@ -119,8 +119,8 @@ const questionDatabase = [
     "1, 5",
     "2, 4"
   ],
-  answer: "2, 5",
-  explanation: "In evolutionary strategies, especially in (μ + λ)-ES, λ (descendants) is often larger than μ (parents). However, '2' is valid in restricted models. The number of iterations can depend on chromosome complexity, making '5' also correct."
+  answer: "1, 3",
+  explanation: "In evolutionary strategies, it is common for the number of descendants to exceed the number of parents, while genetic algorithms typically maintain a constant population size across generations. The other statements are not universally true."
 },
 {
   category: "Optimization Theory",
@@ -184,8 +184,8 @@ const questionDatabase = [
     "1/f",
     "-f"
   ],
-  answer: "1/(1+f)",
-  explanation: "When using fitness proportionate selection (FPS) and needing to transform a maximization problem into a minimization-friendly form, 1/(1+f) is commonly used to maintain positive fitness values and preserve relative differences."
+  answer: "f",
+  explanation: "No transformation or inversion is needed (unlike in minimization problems) when using fitness proportionate selection (FPS) for maximization. The fitness function can directly use f as it is."
 },
 {
   category: "Genetic Algorithms",
@@ -197,8 +197,8 @@ const questionDatabase = [
     "does not allow more than 2 genes with the same value in a chromosome",
     "is fixed-width"
   ],
-  answer: "does not allow more than 2 genes with the same value in a chromosome",
-  explanation: "Permutation representations require each gene to be unique (like in the Traveling Salesman Problem), so repeated values would invalidate the solution."
+  answer: "is fixed-width",
+  explanation: "It is fixed-width, meaning the number of genes (positions in the chromosome) is constant and equal to the number of elements to permute."
 },
 {
   category: "Memetic Algorithms",
@@ -223,7 +223,7 @@ const questionDatabase = [
     "may use a SUS selection based on standard FPS distribution.",
     "can not use any selection mechanism."
   ],
-  answer: "can not use the standard FPS selection probability",
+  answer: "can not use the standard FPS selection probability.",
   explanation: "Stochastic Universal Sampling (SUS) can still be used with FPS even when negative values exist, as long as the fitness values are normalized or shifted to be strictly positive."
 },
 {
@@ -327,8 +327,8 @@ const questionDatabase = [
     "6",
     "1"
   ],
-  answer: "1, 2, 4",
-  explanation: "A diverse initial population helps avoid premature convergence. While not strictly necessary in all algorithm variants, it is common. The size is typically proportional to the generation size for consistency."
+  answer: "2",
+  explanation: "A diverse initial population helps avoid premature convergence. While not strictly necessary in all algorithm variants, it is common."
 },
 {
   category: "Evolutionary Computation",
