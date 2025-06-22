@@ -1,4 +1,4 @@
-// Comprehensive Business Law Question Database
+// Comprehensive EV and GA Question Database
 const questionDatabase = [
  {
   category: "Genetic Algorithms",
@@ -145,8 +145,8 @@ const questionDatabase = [
     "5, 7, 8, 10, 12",
     "2, 4, 8, 10, 12"
   ],
-  answer: "3, 4, 6, 11, 12",
-  explanation: "Mutation in GAs is typically applied to the current population, may produce non-viable results, can be applied after population generation, and is often used in unconstrained problems. It is not limited to non-random factors."
+  answer: "2, 4, 8, 10, 12",
+  explanation: "Not sure about the exact context, but generally, mutation is applied to individual genes or individuals, can produce non-viable offspring, is applied before selection, and has a low probability of occurrence. It is not limited to no-constraint problems."
 },
 {
   category: "Genetic Algorithms",
@@ -530,22 +530,18 @@ const questionDatabase = [
 },
 {
   "category": "Genetic Algorithms",
-  "question": "Fie C un operator genetic de mutație definit în reprezentarea prin permutări de dimensiune n. Alegeți afirmațiile adevărate:",
+  "question": "Fie C un operator genetic de mutație definit în reprezentarea prin permutări de dimensiune n. Alegeți afirmațiile adevărate:\n1. C este unar\n2. Întotdeauna C alege aleator două gene pe baza cărora este în continuare definită mutația\n3. Rezultatul furnizat de C poate avea o dimensiune diferită de n\n4. Rezultatul / rezultatele lui C este / sunt permutare / permutări",
   "options": [
-    "1. C este unar",
-    "2. Întotdeauna C alege aleator două gene pe baza cărora este în continuare definită mutația",
-    "3. Rezultatul furnizat de C este poate avea o dimensiune diferită de n",
-    "4. Rezultatul / rezultatele lui C este / sunt permutare / permutări"
+    "1, 2, 3",
+    "1, 2, 4",
+    "1, 2",
+    "1, 4",
+    "2, 3, 4"
   ],
-  "answer": [
-    "2. Întotdeauna C alege aleator două gene pe baza cărora este în continuare definită mutația",
-    "3. Rezultatul furnizat de C este poate avea o dimensiune diferită de n",
-    "4. Rezultatul / rezultatele lui C este / sunt permutare / permutări"
-  ],
-  "explanation": "Operatorul C este unar, dar afirmația importantă este că rezultatul este tot o permutare (4), mutația se definește pe baza a două gene (2), și unele mutații păstrează dimensiunea dar pot părea diferite logic — totuși, în contextul dat, afirmația 3 este considerată corectă în test."
+  "answer": "1, 4",
+  "explanation": "Operatorul C este unar, și rezultatul este o permutare (4)."
 },
-[
-  {
+{
     "category": "Genetic Algorithms",
     "question": "Fie permutările p1=(3, 5, 4, 2, 1, 7, 8, 6) și p2=(1, 6, 7, 2, 3, 4, 5, 8). Rezultatul OCX(p1, p2) pentru secvența de recombinare i=2, j=5 este:",
     "options": [
@@ -556,295 +552,578 @@ const questionDatabase = [
       "O secvență crescătoare de numere 1…8 cu posibile duplicate"
     ],
     "answer": "O permutare a mulțimii 1…8",
-    "explanation": "OCX (Order Crossover) produce o permutare validă atunci când este aplicată pe permutări. Rezultatul este o permutare a numerelor 1 până la 8 fără duplicate."
-  }
-],
-[
+    "explanation": "OCX (Order Crossover) produces a valid permutation when applied to permutations. The result is a permutation of the numbers 1 through 8 without duplicates."
+  },
   {
-    "category": "Genetic Algorithms - Mutation",
-    "question": "Fie permutarea p=(11, 12, 8, 3, 5, 4, 9, 2, 1, 7, 10, 6) și rezultatul mutației prin interschimbare q=(11, 12, 8, 3, 5, 4, 9, 2, 1, 10, 7, 6). Prima poziție în permutare este codificată cu 1. Alegeți variantele corecte:",
-    "options": [
-      "1. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inversiune cu (10, 11) are același efect",
-      "2. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inversiune cu (10, 11) are efect diferit",
-      "3. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inserare cu (10, 11) are același efect",
-      "4. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inserare cu (10, 11) are efect diferit"
-    ],
-    "answer": "1 și 4",
-    "explanation": "Mutația prin interschimbare inversează elementele de pe pozițiile indicate. Inversiunea poate da același rezultat în unele cazuri, dar inserarea are comportament diferit, deci afirmațiile 1 și 4 sunt corecte."
-  }
-],
-[
-  {
-    "category": "Genetic Algorithms - Initial Population",
-    "question": "Într-un algoritm genetic, populația inițială este",
-    "options": [
-      "generată aleator, la începutul căutării",
-      "calculată în ciclul evolutiv, la fiecare pas",
-      "nici unul din celelalte răspunsuri",
-      "parametru de intrare",
-      "dată de ieșire"
-    ],
-    "answer": "generată aleator, la începutul căutării",
-    "explanation": "În algoritmii genetici, populația inițială este de obicei generată aleator la începutul procesului de căutare pentru a asigura diversitatea genetică."
-  }
-],
-[
-  {
-    "category": "Genetic Algorithms - Mutation",
-    "question": "Într-un algoritm evolutiv, mutația apare",
-    "options": [
-      "nici unul din celelalte răspunsuri",
-      "exclusiv la indivizii cu calitate slabă",
-      "exclusiv la indivizii cu calitate medie",
-      "după încheierea căutării",
-      "după reproducere"
-    ],
-    "answer": "după reproducere",
-    "explanation": "În cadrul algoritmilor evolutivi, operatorul de mutație este aplicat de obicei după reproducere pentru a introduce variație genetică în populația nouă."
-  }
-],
-[
-  {
-    "category": "Genetic Algorithms - Initial Population",
-    "question": "Într-un algoritm genetic, populația inițială:",
-    "options": [
-      "Este generată până când este atins un optim local",
-      "Este construită o singură dată",
-      "Suferă mutație cu o probabilitate relativ mică",
-      "Trebuie modificată la fiecare iterație",
-      "Conține exclusiv indivizi fezabili",
-      "Este formată din indivizii care trec în generația următoare",
-      "Este generată utilizînd distribuția de probabilitate normală"
-    ],
-    "answer": ["2", "5"],
-    "explanation": "Într-un algoritm genetic, populația inițială este de obicei generată o singură dată și conține indivizi fezabili. Nu este construită iterativ și nu se bazează neapărat pe o distribuție normală."
-  }
-],
-[
-  {
-    "category": "Genetic Algorithms - Recombination",
-    "question": "În cadrul unui algoritm genetic operația de recombinare:",
-    "options": [
-      "1. Este efectuată o singură dată pe parcursul unui algoritm genetic",
-      "2. Este efectuată imediat după fiecare etapă de selecție a părinților",
-      "3. În general probabilitatea de recombinare nu contează în rezolvarea problemelor prin algoritmi genetici",
-      "4. Este efectuată imediat înaintea fiecărei proceduri de mutație",
-      "5. Este efectuată imediat înaintea fiecărei etape de selecție a părinților",
-      "6. Utilizează populația inițială",
-      "7. Este utilizată doar în probleme fără constrîngeri",
-      "8. Este utilizată cu probabilitate mare",
-      "9. Este utilizată cu probabilitate mică",
-      "10. Este efectuată o singură dată, după prima etapă de selecție a părinților"
-    ],
-    "answer": ["2", "4", "8"],
-    "explanation": "În algoritmii genetici, recombinarea este de obicei aplicată imediat după selecție, înainte de mutație, și cu o probabilitate mare pentru a explora spațiul soluțiilor."
-  }
-],
-[
-  {
-    "category": "Genetic Algorithms - Binary Representation",
-    "question": "În algoritmii genetici, reprezentarea binară",
-    "options": [
-      "Nu depinde de problema rezolvată",
-      "Nu este utilizată pentru algoritmi genetici",
-      "Este cea mai utilizată variantă de reprezentare a genotipurilor",
-      "Nici unul din celelalte răspunsuri nu este corect",
-      "Duce mereu la rezultate optime"
-    ],
-    "answer": "Nici unul din celelalte răspunsuri nu este corect",
-    "explanation": "Reprezentarea binară nu este întotdeauna cea mai potrivită alegere și nu garantează rezultate optime. Alegerea tipului de reprezentare depinde de problema rezolvată."
-  }
-],
-[
-  {
-    "category": "Genetic Algorithms - Characteristics",
-    "question": "Un algoritm genetic care maximizează o funcție de calitate este:",
-    "options": [
-      "1. stocastic",
-      "2. determinist",
-      "3. bazat pe populații",
-      "4. finit",
-      "5. convergent indiferent de operatorii de variație folosiți",
-      "6. convergent, dacă operatorii de variație folosiți acoperă tot spațiul soluțiilor",
-      "7. independent de reprezentare"
-    ],
-    "answer": ["1. stocastic", "3. bazat pe populații", "4. finit", "6. convergent, dacă operatorii de variație folosiți acoperă tot spațiul soluțiilor"],
-    "explanation": "Un algoritm genetic tipic este stocastic, lucrează pe o populație de soluții, are un număr finit de iterații și converge dacă operatorii pot acoperi întregul spațiu de soluții."
-  }
-],
-[
-  {
-    "category": "Genetic Algorithms - Integer Representation",
-    "question": "În algoritmii genetici, reprezentarea prin șiruri de numere întregi",
-    "options": [
-      "Este doar un exercițiu de implementare, nefiind necesară",
-      "Este preferabilă atunci cînd pentru fiecare genă sînt posibile mai mult de două valori distincte",
-      "Nu poate fi utilizată în cazul atributelor ordinale",
-      "Nu este utilizată în algoritmi genetici",
-      "Este preferabilă pentru problemele de optimizare"
-    ],
-    "answer": "Este preferabilă atunci cînd pentru fiecare genă sînt posibile mai mult de două valori distincte",
-    "explanation": "Reprezentarea cu numere întregi este adecvată pentru gene care pot avea mai multe valori discrete, ceea ce o face potrivită în probleme unde binarul ar fi prea restrictiv."
-  }
-],
-[
-  {
-    "category": "Memetic Algorithms",
-    "question": "Scopul unui algoritm memetic este:",
-    "options": [
-      "de a utiliza factori aleatori",
-      "de a îmbunătăți informația de la o populație la alta",
-      "de a introduce proprietatea de auto-adaptare",
-      "de a îmbunătăți informația din populația curentă prin utilizarea de algoritmi de căutare locală",
-      "de a asigura perpetuarea individului cu calitate maximă din populația curentă",
-      "de a crește calitatea populației curente",
-      "de a procesa separat fiecare iterație",
-      "de a utiliza euristici"
-    ],
-    "answer": ["de a îmbunătăți informația de la o populație la alta", "de a îmbunătăți informația din populația curentă prin utilizarea de algoritmi de căutare locală", "de a crește calitatea populației curente"],
-    "explanation": "Algoritmii memetici combină evoluția globală cu îmbunătățiri locale, scopul fiind să optimizeze mai eficient folosind atât schimb de informație între populații, cât și metode locale de rafinare."
-  }
-],
-[
-  {
-    "category": "Algoritmi Evolutivi",
-    "question": "Într-un algoritm evolutiv, operatorii de variație sunt",
-    "options": [
-      "generarea populației inițiale",
-      "mutația și recombinarea",
-      "selecția generației următoare",
-      "selecția populației de părinți",
-      "nici unul din celelalte răspunsuri"
-    ],
-    "answer": "mutația și recombinarea",
-    "explanation": "În cadrul algoritmilor evolutivi, operatorii de variație sunt folosiți pentru a genera diversitate în populație. Mutația introduce modificări aleatorii, iar recombinarea (sau crossover-ul) combină informația genetică a părinților pentru a produce descendenți noi."
-  }
-],
-[
-  {
-    "category": "Calcul Evolutiv - Tipuri de Probleme",
-    "question": "Tipurile de probleme care pot fi rezolvate pe baza calculului evolutiv sunt:",
-    "options": [
-      "2, 4, 6, 8",
-      "2, 3, 4",
-      "1, 3, 5, 7",
-      "1, 4, 8",
-      "1, 4, 6"
-    ],
-    "answer": "1, 4, 8",
-    "explanation": "Calculul evolutiv este aplicabil în rezolvarea problemelor de optimizare (1), de modelare (4) și de simulare (8), deoarece acestea beneficiază de natura exploratorie și adaptivă a algoritmilor genetici și a metodelor inspirate din evoluția naturală."
-  }
-],
-[
-  {
-    "category": "Strategii Evolutive - Operator de Mutație",
-    "question": "Operatorul de mutație în strategiile evolutive:",
-    "options": [
-      "este de tip neuniform",
-      "este de tip amestec",
-      "este de tip uniform",
-      "este de tip resetare aleatoare",
-      "este de tip inversiune"
-    ],
-    "answer": "este de tip neuniform",
-    "explanation": "În strategiile evolutive, mutația de tip neuniform este preferată deoarece permite o explorare mai largă la începutul procesului evolutiv și o exploatare mai fină pe măsură ce algoritmul converge."
-  }
-],
-[
-  {
-    "category": "Spațiul soluțiilor - Optimizare continuă",
-    "question": "Fie următoarea problemă: minimizează f : [a1,b1] x [a2,b2] x ... x [an,bn] -> R, f(x1, x2, ..., xn) = suma(x1, x2, ..., xn) - produs(x1, x2, ..., xn). Spațiul soluțiilor problemei este",
-    "options": [
-      "mulțimea permutărilor de ordin n",
-      "finit",
-      "mulțimea vectorilor binari de dimensiune n",
-      "infinit",
-      "vid"
-    ],
-    "answer": "infinit",
-    "explanation": "Domeniul de definiție este un produs cartezian de intervale reale, deci conține o infinitate de puncte. Spațiul soluțiilor este astfel infinit."
-  }
-],
-[
-  {
-    "category": "Operatori genetici - CX (Cycle Crossover)",
-    "question": "Fie X = [9, 6, 4, 5, 3, 1, 2, 7, 10, 8], Y = [10, 3, 7, 6, 9, 2, 5, 4, 1, 8] permutări părinte. Care din următoarele perechi de permutări rezultă prin aplicarea procedurii CX?",
-    "options": [
-      "C1 = [6 8 7 10 5 1 9 3 4 2], C2 = [9 1 8 3 6 7 5 10 4 2]",
-      "C1 = [9 6 7 5 3 1 2 4 10 8], C2 = [10 3 4 6 9 2 5 7 1 8]",
-      "C1 = [6 7 8 10 5 1 9 3 4 2], C2 = [9 8 1 3 6 7 5 10 4 2]",
-      "C1 = [8 7 10 5 1 9 3 4 2 6], C2 = [2 9 1 8 3 6 7 5 10 4]",
-      "C1 = X, C2 = Y"
-    ],
-    "answer": "C1 = [6 7 8 10 5 1 9 3 4 2], C2 = [9 8 1 3 6 7 5 10 4 2]",
-    "explanation": "Cycle Crossover (CX) păstrează ciclurile dintr-un părinte și completează restul din celălalt. Aceasta este implementarea corectă conform algoritmului CX."
-  }
-],
-[
-  {
-    "category": "Strategii evolutive generale",
-    "question": "Alegeți varianta corectă. Un algoritm din clasa strategiilor evolutive generale care minimizează o funcție f:",
-    "options": [
-      "Folosește o populație inițială formată din primele elemente din domeniul lui f în ordinea crescătoare a valorilor lui f",
-      "Utilizează întotdeauna reprezentarea prin vectori binari",
-      "Utilizează întotdeauna reprezentarea prin permutări a elementelor din domeniul lui f",
-      "Utilizează întotdeauna reprezentarea prin vectori cu numere reale",
-      "Folosește o populație inițială formată din primele elemente din domeniul lui f în ordinea descrescătoare a valorilor lui f"
-    ],
-    "answer": "Utilizează întotdeauna reprezentarea prin vectori cu numere reale",
-    "explanation": "Algoritmii din clasa strategiilor evolutive generale folosesc reprezentarea real-valued (cu vectori de numere reale) pentru a oferi flexibilitate în optimizarea funcțiilor continue."
-  }
-],
-[
-  {
-    "category": "Funcția fitness în algoritmi genetici",
-    "question": "Dacă f este o funcție care trebuie maximizată, f este cu valori pozitive și este definită pe spațiu continuu, atunci pentru optimizarea lui f cu un algoritm genetic în care poate fi utilizată selecția FPS este utilizată funcția calitate (fitness):",
-    "options": [
-      "1/(1+f)",
-      "1-f",
-      "1/f",
-      "-f",
-      "f"
-    ],
-    "answer": "f",
-    "explanation": "Pentru funcții de maximizat cu valori pozitive și definite pe un spațiu continuu, funcția f este direct folosită ca funcție fitness în selecția FPS (Fitness Proportionate Selection)."
-  }
-],
-[
-  {
-    "category": "Spațiul soluțiilor în probleme de optimizare",
-    "question": "Fie următoarea problemă: minimizează f : [a1,b1] x [a2,b2] x ... x [an,bn] -> R, f(x1, x2, ..., xn) = max(x1, x2, ..., xn) - min(x1, x2, ..., xn). Spațiul soluțiilor problemei este",
-    "options": [
-      "mulțimea vectorilor de dimensiune n, cu valori numere reale conform definiției f",
-      "mulțimea permutărilor de ordin n, conform definiției f",
-      "finit",
-      "mulțimea vectorilor cu numere întregi de dimensiune n conform definiției f",
-      "vid"
-    ],
-    "answer": "mulțimea vectorilor de dimensiune n, cu valori numere reale conform definiției f",
-    "explanation": "Funcția este definită pe un spațiu continuu R^n, deci soluțiile sunt vectori cu valori reale, nu discrete sau permutări. Spațiul este infinit, nu finit."
-  }
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  "category": "Genetic Algorithms - Mutation",
+  "question": "Fie permutarea p=(11, 12, 8, 3, 5, 4, 9, 2, 1, 7, 10, 6) și rezultatul mutației prin interschimbare q=(11, 12, 8, 3, 5, 4, 9, 2, 1, 10, 7, 6). Prima poziție în permutare este codificată cu 1. Alegeți variantele corecte:",
+  "options": [
+    "1. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inversiune cu (10, 11) are același efect",
+    "2. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inversiune cu (10, 11) are efect diferit",
+    "3. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inserare cu (10, 11) are același efect",
+    "4. Pozițiile folosite pentru mutație sînt: (10, 11); mutația prin inserare cu (10, 11) are efect diferit"
+  ],
+  "answer": "1 și 4",
+  "explanation": "Mutația prin interschimbare inversează elementele de pe pozițiile indicate. Inversiunea poate da același rezultat în unele cazuri, dar inserarea are comportament diferit, deci afirmațiile 1 și 4 sunt corecte."
+},
+{
+  "category": "Genetic Algorithms - Initial Population",
+  "question": "Într-un algoritm genetic, populația inițială este",
+  "options": [
+    "generată aleator, la începutul căutării",
+    "calculată în ciclul evolutiv, la fiecare pas",
+    "nici unul din celelalte răspunsuri",
+    "parametru de intrare",
+    "dată de ieșire"
+  ],
+  "answer": "generată aleator, la începutul căutării",
+  "explanation": "În algoritmii genetici, populația inițială este de obicei generată aleator la începutul procesului de căutare pentru a asigura diversitatea genetică."
+},
+{
+  "category": "Genetic Algorithms - Mutation",
+  "question": "Într-un algoritm evolutiv, mutația apare",
+  "options": [
+    "nici unul din celelalte răspunsuri",
+    "exclusiv la indivizii cu calitate slabă",
+    "exclusiv la indivizii cu calitate medie",
+    "după încheierea căutării",
+    "după reproducere"
+  ],
+  "answer": "după reproducere",
+  "explanation": "În cadrul algoritmilor evolutivi, operatorul de mutație este aplicat de obicei după reproducere pentru a introduce variație genetică în populația nouă."
+},
+{
+  "category": "Genetic Algorithms - Initial Population",
+  "question": "Într-un algoritm genetic, populația inițială:",
+  "options": [
+    "Este generată până când este atins un optim local",
+    "Este construită o singură dată",
+    "Suferă mutație cu o probabilitate relativ mică",
+    "Trebuie modificată la fiecare iterație",
+    "Conține exclusiv indivizi fezabili",
+    "Este formată din indivizii care trec în generația următoare",
+    "Este generată utilizînd distribuția de probabilitate normală"
+  ],
+  "answer": ["2", "5"],
+  "explanation": "Într-un algoritm genetic, populația inițială este de obicei generată o singură dată și conține indivizi fezabili. Nu este construită iterativ și nu se bazează neapărat pe o distribuție normală."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "In a genetic algorithm, the initial population:\n1. is generated until a local optimum is reached;\n2. is built only once;\n3. mutates with a low probability;\n4. must be changed at each iteration;\n5. includes only viable individuals;\n6. consists of duals that pass into the next generation;\n7. is generated using the normal probability distribution.",
+  "options": [
+    "4, 5, 7",
+    "2, 5",
+    "1, 3",
+    "2, 5, 7",
+    "1, 2, 7"
+  ],
+  "answer": "2, 5, 7",
+  "explanation": "The initial population in genetic algorithms is:\n2. built only once at the beginning;\n5. usually filtered to include viable individuals;\n7. often generated using a normal distribution or similar stochastic method. Option 1 is incorrect because initial population generation does not continue until a local optimum is reached."
+},
+{
+  "category": "Genetic Algorithms - Recombination",
+  "question": "În cadrul unui algoritm genetic operația de recombinare:",
+  "options": [
+    "1. Este efectuată o singură dată pe parcursul unui algoritm genetic",
+    "2. Este efectuată imediat după fiecare etapă de selecție a părinților",
+    "3. În general probabilitatea de recombinare nu contează în rezolvarea problemelor prin algoritmi genetici",
+    "4. Este efectuată imediat înaintea fiecărei proceduri de mutație",
+    "5. Este efectuată imediat înaintea fiecărei etape de selecție a părinților",
+    "6. Utilizează populația inițială",
+    "7. Este utilizată doar în probleme fără constrîngeri",
+    "8. Este utilizată cu probabilitate mare",
+    "9. Este utilizată cu probabilitate mică",
+    "10. Este efectuată o singură dată, după prima etapă de selecție a părinților"
+  ],
+  "answer": ["2", "4", "8"],
+  "explanation": "În algoritmii genetici, recombinarea este de obicei aplicată imediat după selecție, înainte de mutație, și cu o probabilitate mare pentru a explora spațiul soluțiilor."
+},
+{
+  "category": "Genetic Algorithms - Binary Representation",
+  "question": "În algoritmii genetici, reprezentarea binară",
+  "options": [
+    "Nu depinde de problema rezolvată",
+    "Nu este utilizată pentru algoritmi genetici",
+    "Este cea mai utilizată variantă de reprezentare a genotipurilor",
+    "Nici unul din celelalte răspunsuri nu este corect",
+    "Duce mereu la rezultate optime"
+  ],
+  "answer": "Nici unul din celelalte răspunsuri nu este corect",
+  "explanation": "Reprezentarea binară nu este întotdeauna cea mai potrivită alegere și nu garantează rezultate optime. Alegerea tipului de reprezentare depinde de problema rezolvată."
+},
+{
+  "category": "Genetic Algorithms - Characteristics",
+  "question": "Un algoritm genetic care maximizează o funcție de calitate este:",
+  "options": [
+    "1. stocastic",
+    "2. determinist",
+    "3. bazat pe populații",
+    "4. finit",
+    "5. convergent indiferent de operatorii de variație folosiți",
+    "6. convergent, dacă operatorii de variație folosiți acoperă tot spațiul soluțiilor",
+    "7. independent de reprezentare"
+  ],
+  "answer": ["1. stocastic", "3. bazat pe populații", "4. finit", "6. convergent, dacă operatorii de variație folosiți acoperă tot spațiul soluțiilor"],
+  "explanation": "Un algoritm genetic tipic este stocastic, lucrează pe o populație de soluții, are un număr finit de iterații și converge dacă operatorii pot acoperi întregul spațiu de soluții."
+},
+{
+  "category": "Genetic Algorithms - Integer Representation",
+  "question": "În algoritmii genetici, reprezentarea prin șiruri de numere întregi",
+  "options": [
+    "Este doar un exercițiu de implementare, nefiind necesară",
+    "Este preferabilă atunci cînd pentru fiecare genă sînt posibile mai mult de două valori distincte",
+    "Nu poate fi utilizată în cazul atributelor ordinale",
+    "Nu este utilizată în algoritmi genetici",
+    "Este preferabilă pentru problemele de optimizare"
+  ],
+  "answer": "Este preferabilă atunci cînd pentru fiecare genă sînt posibile mai mult de două valori distincte",
+  "explanation": "Reprezentarea cu numere întregi este adecvată pentru gene care pot avea mai multe valori discrete, ceea ce o face potrivită în probleme unde binarul ar fi prea restrictiv."
+},
+{
+  "category": "Memetic Algorithms",
+  "question": "Scopul unui algoritm memetic este:",
+  "options": [
+    "de a utiliza factori aleatori",
+    "de a îmbunătăți informația de la o populație la alta",
+    "de a introduce proprietatea de auto-adaptare",
+    "de a îmbunătăți informația din populația curentă prin utilizarea de algoritmi de căutare locală",
+    "de a asigura perpetuarea individului cu calitate maximă din populația curentă",
+    "de a crește calitatea populației curente",
+    "de a procesa separat fiecare iterație",
+    "de a utiliza euristici"
+  ],
+  "answer": ["de a îmbunătăți informația de la o populație la alta", "de a îmbunătăți informația din populația curentă prin utilizarea de algoritmi de căutare locală", "de a crește calitatea populației curente"],
+  "explanation": "Algoritmii memetici combină evoluția globală cu îmbunătățiri locale, scopul fiind să optimizeze mai eficient folosind atât schimb de informație între populații, cât și metode locale de rafinare."
+},
+{
+  "category": "Algoritmi Evolutivi",
+  "question": "Într-un algoritm evolutiv, operatorii de variație sunt",
+  "options": [
+    "generarea populației inițiale",
+    "mutația și recombinarea",
+    "selecția generației următoare",
+    "selecția populației de părinți",
+    "nici unul din celelalte răspunsuri"
+  ],
+  "answer": "mutația și recombinarea",
+  "explanation": "În cadrul algoritmilor evolutivi, operatorii de variație sunt folosiți pentru a genera diversitate în populație. Mutația introduce modificări aleatorii, iar recombinarea (sau crossover-ul) combină informația genetică a părinților pentru a produce descendenți noi."
+},
+{
+  "category": "Calcul Evolutiv - Tipuri de Probleme",
+  "question": "Tipurile de probleme care pot fi rezolvate pe baza calculului evolutiv sunt:",
+  "options": [
+    "2, 4, 6, 8",
+    "2, 3, 4",
+    "1, 3, 5, 7",
+    "1, 4, 8",
+    "1, 4, 6"
+  ],
+  "answer": "1, 4, 8",
+  "explanation": "Calculul evolutiv este aplicabil în rezolvarea problemelor de optimizare (1), de modelare (4) și de simulare (8), deoarece acestea beneficiază de natura exploratorie și adaptivă a algoritmilor genetici și a metodelor inspirate din evoluția naturală."
+},
+{
+  "category": "Strategii Evolutive - Operator de Mutație",
+  "question": "Operatorul de mutație în strategiile evolutive:",
+  "options": [
+    "este de tip neuniform",
+    "este de tip amestec",
+    "este de tip uniform",
+    "este de tip resetare aleatoare",
+    "este de tip inversiune"
+  ],
+  "answer": "este de tip neuniform",
+  "explanation": "În strategiile evolutive, mutația de tip neuniform este preferată deoarece permite o explorare mai largă la începutul procesului evolutiv și o exploatare mai fină pe măsură ce algoritmul converge."
+},
+{
+  "category": "Spațiul soluțiilor - Optimizare continuă",
+  "question": "Fie următoarea problemă: minimizează f : [a1,b1] x [a2,b2] x ... x [an,bn] -> R, f(x1, x2, ..., xn) = suma(x1, x2, ..., xn) - produs(x1, x2, ..., xn). Spațiul soluțiilor problemei este",
+  "options": [
+    "mulțimea permutărilor de ordin n",
+    "finit",
+    "mulțimea vectorilor binari de dimensiune n",
+    "infinit",
+    "vid"
+  ],
+  "answer": "infinit",
+  "explanation": "Domeniul de definiție este un produs cartezian de intervale reale, deci conține o infinitate de puncte. Spațiul soluțiilor este astfel infinit."
+},
+{
+  "category": "Operatori genetici - CX (Cycle Crossover)",
+  "question": "Fie X = [9, 6, 4, 5, 3, 1, 2, 7, 10, 8], Y = [10, 3, 7, 6, 9, 2, 5, 4, 1, 8] permutări părinte. Care din următoarele perechi de permutări rezultă prin aplicarea procedurii CX?",
+  "options": [
+    "C1 = [6 8 7 10 5 1 9 3 4 2], C2 = [9 1 8 3 6 7 5 10 4 2]",
+    "C1 = [9 6 7 5 3 1 2 4 10 8], C2 = [10 3 4 6 9 2 5 7 1 8]",
+    "C1 = [6 7 8 10 5 1 9 3 4 2], C2 = [9 8 1 3 6 7 5 10 4 2]",
+    "C1 = [8 7 10 5 1 9 3 4 2 6], C2 = [2 9 1 8 3 6 7 5 10 4]",
+    "C1 = X, C2 = Y"
+  ],
+  "answer": "C1 = [6 7 8 10 5 1 9 3 4 2], C2 = [9 8 1 3 6 7 5 10 4 2]",
+  "explanation": "Cycle Crossover (CX) păstrează ciclurile dintr-un părinte și completează restul din celălalt. Aceasta este implementarea corectă conform algoritmului CX."
+},
+{
+  "category": "Strategii evolutive generale",
+  "question": "Alegeți varianta corectă. Un algoritm din clasa strategiilor evolutive generale care minimizează o funcție f:",
+  "options": [
+    "Folosește o populație inițială formată din primele elemente din domeniul lui f în ordinea crescătoare a valorilor lui f",
+    "Utilizează întotdeauna reprezentarea prin vectori binari",
+    "Utilizează întotdeauna reprezentarea prin permutări a elementelor din domeniul lui f",
+    "Utilizează întotdeauna reprezentarea prin vectori cu numere reale",
+    "Folosește o populație inițială formată din primele elemente din domeniul lui f în ordinea descrescătoare a valorilor lui f"
+  ],
+  "answer": "Utilizează întotdeauna reprezentarea prin vectori cu numere reale",
+  "explanation": "Algoritmii din clasa strategiilor evolutive generale folosesc reprezentarea real-valued (cu vectori de numere reale) pentru a oferi flexibilitate în optimizarea funcțiilor continue."
+},
+{
+  "category": "Funcția fitness în algoritmi genetici",
+  "question": "Dacă f este o funcție care trebuie maximizată, f este cu valori pozitive și este definită pe spațiu continuu, atunci pentru optimizarea lui f cu un algoritm genetic în care poate fi utilizată selecția FPS este utilizată funcția calitate (fitness):",
+  "options": [
+    "1/(1+f)",
+    "1-f",
+    "1/f",
+    "-f",
+    "f"
+  ],
+  "answer": "f",
+  "explanation": "Pentru funcții de maximizat cu valori pozitive și definite pe un spațiu continuu, funcția f este direct folosită ca funcție fitness în selecția FPS (Fitness Proportionate Selection)."
+},
+{
+  "category": "Spațiul soluțiilor în probleme de optimizare",
+  "question": "Fie următoarea problemă: minimizează f : [a1,b1] x [a2,b2] x ... x [an,bn] -> R, f(x1, x2, ..., xn) = max(x1, x2, ..., xn) - min(x1, x2, ..., xn). Spațiul soluțiilor problemei este",
+  "options": [
+    "mulțimea vectorilor de dimensiune n, cu valori numere reale conform definiției f",
+    "mulțimea permutărilor de ordin n, conform definiției f",
+    "finit",
+    "mulțimea vectorilor cu numere întregi de dimensiune n conform definiției f",
+    "vid"
+  ],
+  "answer": "mulțimea vectorilor de dimensiune n, cu valori numere reale conform definiției f",
+  "explanation": "Funcția este definită pe un spațiu continuu R^n, deci soluțiile sunt vectori cu valori reale, nu discrete sau permutări. Spațiul este infinit, nu finit."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "In a genetic algorithm, parent selection operation:\n1. is used only in constraint problems;\n2. happens only once, after first population is generated;\n3. happens immediately after an evaluated current population is available;\n4. is always based on a selection probability distribution;\n5. uses the mutated descendants population;\n6. may be based on a selection probability distribution;\n7. uses the descendants population;\n8. uses the current population;\n9. happens only once during the entire genetic algorithm;\n10. does not take into account the age factor;\n11. happens immediately before each mutation procedure.",
+  "options": [
+    "2, 3, 4, 5",
+    "3, 6, 8",
+    "2, 3, 5, 7, 8",
+    "3, 6, 8, 10",
+    "1, 6, 9, 11"
+  ],
+  "answer": "3, 6, 8, 10",
+  "explanation": "In genetic algorithms, parent selection:\n3. happens after the current population is evaluated,\n6. may be based on selection probability (e.g., roulette wheel, tournament),\n8. uses the current (not descendant) population. Options like 1, 2, 5, 7, and 11 are incorrect or not standard practice."
+},
+{
+  "category": "Evolutionary Strategies",
+  "question": "In evolutionary strategy algorithms, a chromosome includes:",
+  "options": [
+    "ES algorithms do not use chromosomes.",
+    "None of the other answers is correct.",
+    "integer values.",
+    "component parts vary between the chromosomes of the population, depending on the fitness.",
+    "a solution part, a mutation step part and a mutation correlation part."
+  ],
+  "answer": "a solution part, a mutation step part and a mutation correlation part.",
+  "explanation": "In evolutionary strategies, each chromosome typically consists of multiple parts: the actual solution vector, the mutation step size (which can adapt over time), and sometimes a mutation correlation matrix. This structure supports self-adaptive behavior in ES algorithms."
+},
+{
+  "category": "Evolutionary Strategies",
+  "question": "The use of distinct mutation steps on each axis (uncorrelated mutation with multiple parameters):\n1. aims to process each axis in a distinct specific manner;\n2. refers to differentiated advance on each axis;\n3. leads to introduction of additional components in candidate vectors (one for each parameter);\nis generally implemented by imposing threshold values on each axis to avoid ineffective mutations (too low step values).",
+  "options": [
+    "1, 3",
+    "2",
+    "all are correct",
+    "1",
+    "1, 2, 3"
+  ],
+  "answer": "all are correct",
+  "explanation": "In uncorrelated mutation with multiple parameters, each axis (dimension) can have its own mutation step. This allows specific, differentiated changes (1 & 2), and requires additional mutation step sizes for each parameter in the chromosome (3). All statements are valid."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "In genetic algorithms, the encoding",
+  "options": [
+    "None of the other answers is correct.",
+    "must be established when the representation is chosen.",
+    "does not depend on the chosen representation.",
+    "guarantees obtaining the optimal result.",
+    "is not necessary."
+  ],
+  "answer": "must be established when the representation is chosen.",
+  "explanation": "In genetic algorithms, the encoding defines how solutions are represented and manipulated. It must be established when selecting the representation, since the operators (e.g., crossover, mutation) rely on the chosen encoding scheme."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "Consider the permutations:\np1 = (3, 5, 4, 2, 1, 7, 8, 6) and\np2 = (1, 6, 7, 2, 3, 4, 5, 8).\nThe result of applying the OCX operator on (p1, p2) using positions i = 2, j = 5 is:",
+  "options": [
+    "a permutation of 1...8.",
+    "None of the other answers is correct.",
+    "a descending sequence of numbers 1...8, possibly with duplicates.",
+    "a sequence of numbers 1...8, possibly with duplicates.",
+    "an ascending sequence of numbers 1...8, possibly with duplicates."
+  ],
+  "answer": "a permutation of 1...8.",
+  "explanation": "Order Crossover (OCX) maintains the permutation property, meaning the resulting offspring will still be a valid permutation of the input set (no duplicates, all elements preserved)."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "Choose the incorrect statements:\n1. Hillclimbing algorithms are based on populations and the current population consists of at least 2 individuals.\n2. The selection of parents in a genetic algorithm is based on the individuals' fitness.\n3. The selection of the next generation in a genetic algorithm uses exclusively the population obtained after mutation.\n4. The recombination in a genetic algorithm depends on the representation of chromosomes.\n5. The maximum numbers of iterations in an evolutionary algorithm does not depend on the representation of chromosomes.",
+  "options": [
+    "2, 4",
+    "2, 3",
+    "1, 5",
+    "1, 3",
+    "2, 5"
+  ],
+  "answer": "1, 3",
+  "explanation": "Statement 1 is incorrect because hill climbing is a single-solution method, not population-based. Statement 3 is incorrect because selection usually considers fitness after evaluation, not just the mutated population. The other statements are correct: parent selection is based on fitness (2), recombination may depend on encoding (4), and iteration count typically does not depend on representation (5)."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "In a genetic algorithm that maximizes a function (fitness):\n1. the selection of next generation is always based on the age of candidates;\n2. only constraint problems can be solved;\n3. FPS selection is not recommended;\n4. the mutation has a low probability;\n5. the descendant multiset does not include doubles;\n6. survivor selection is based on candidate fitness and/or age;\n7. the recombination happens rarely;\n8. the goal is to find a global maximum point;\n9. the chromosome structure is different if the function is translated.",
+  "options": [
+    "5, 6, 7",
+    "1, 3, 5, 9",
+    "3, 6, 8",
+    "1, 3, 4, 7",
+    "4, 6, 8"
+  ],
+  "answer": "4, 6, 8",
+  "explanation": "Correct statements include:\n4. Mutation typically happens with low probability.\n6. Survivor selection often uses fitness and possibly age.\n8. The goal of a GA is usually to find a global maximum (or minimum) of a function. The other options include misleading or incorrect claims (e.g., selection only by age or only solving constraint problems)."
+},
+{
+  "category": "Optimization Algorithms",
+  "question": "The hillclimbing algorithm:",
+  "options": [
+    "is a deterministic algorithm",
+    "is a gradient algorithm",
+    "None of the other answers are correct.",
+    "is an evolutionary algorithm",
+    "is a self-adaptive algorithm"
+  ],
+  "answer": "is a deterministic algorithm",
+  "explanation": "Hill climbing is typically a deterministic local search algorithm that iteratively improves a single solution based on a fitness function. It is not evolutionary, gradient-based, or self-adaptive in the classical sense."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "Consider M a genetic mutation operator defined for the permutation representation of size n (studied in class). Select the correct statements:\n1. M is a unary operator\n2. M always randomly selects 2 genes to apply the mutation\n3. The result of M may have a different size than n\n4. The result of M is a permutation",
+  "options": [
+    "1, 2, 3",
+    "1, 2, 4",
+    "1, 4",
+    "1, 2",
+    "2, 3, 4"
+  ],
+  "answer": "1, 2, 4",
+  "explanation": "1. Mutation is a unary operator as it works on a single individual.\n4. Since M operates on permutations, the result must remain a valid permutation. Statement 3 is false: mutation should preserve the length of the permutation."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "Consider the permutations:\nx = {2, 4, 9, 6, 5, 7, 8, 1, 3, 10} and\ny = {8, 2, 6, 4, 1, 5, 7, 10, 3, 9}.\nBy applying the PMX operator, this descendant is created:\nc = {8, 4, 9, 6, 5, 7, 1, 10, 3, 2}.\nThe order of parents and the positions used are:",
+  "options": [
+    "(y, x) and (2, 6)",
+    "(x, y) and (2, 6)",
+    "(y, x) and (1, 4)",
+    "(x, y) and (1, 4)",
+    "(y, x) and (1, 5)"
+  ],
+  "answer": "(y, x) and (2, 6)",
+  "explanation": "The child 'c' contains the middle segment from parent x and the rest filled based on y with PMX logic. Therefore, the correct order is (y, x), and the segment was taken from positions 2 to 6 (1-based index)."
+},
+{
+  "category": "Evolutionary Strategies",
+  "question": "Generally, an ES algorithm based on populations:\n1. starts a stochastic search in the solution space;\n2. uses mutation as the main generator of new individuals;\n3. uses elitist selection to generate the parent population;\n4. computes all optimal solutions of a problem;\n5. uses a local or global recombination operator.",
+  "options": [
+    "2, 3, 4",
+    "5",
+    "1, 3, 5",
+    "1, 2, 3",
+    "1, 2, 5"
+  ],
+  "answer": "1, 2, 5",
+  "explanation": "ES algorithms:\n1. Perform a stochastic search, not deterministic.\n2. Rely primarily on mutation to explore the search space.\n5. Use recombination (local or global) to combine parent information.\nStatements 3 and 4 are false: elitist selection is not necessarily used, and ES does not aim to compute all optimal solutions."
+},
+{
+  "category": "Evolutionary Algorithms",
+  "question": "In an evolutionary algorithm, the fitness function:",
+  "options": [
+    "is established by Holland",
+    "estimates the level of adaptation of a candidate",
+    "is defined on the 1-dimensional space",
+    "is chosen based on the population size",
+    "is an asymptotic function"
+  ],
+  "answer": "estimates the level of adaptation of a candidate",
+  "explanation": "In evolutionary algorithms, the fitness function evaluates how well a candidate solution adapts to the problem environment — it quantifies the 'fitness' or quality of each solution in the population."
+},
+{
+  "category": "Evolutionary Algorithms",
+  "question": "In an evolutionary algorithm, mutation happens:",
+  "options": [
+    "None of the other answers is correct.",
+    "after recombination",
+    "only on individuals with average fitness",
+    "after the end of the search",
+    "only on individuals with low fitness"
+  ],
+  "answer": "after recombination",
+  "explanation": "In evolutionary algorithms, mutation typically occurs **after recombination** in the genetic pipeline. It introduces random variation to offspring and is not restricted to individuals of certain fitness levels."
+},
+{
+  "category": "Neighborhood Structures in Search Algorithms",
+  "question": "Consider x a binary vector with 10 elements that fulfills a viability condition A. A neighbor of x is a binary vector with 10 elements that fulfills the condition A and is at Hamming distance 1 from x. The set of neighbors of x:\n1. has 10 elements\n2. has at most 10 elements\n3. has 10 elements with better fitness than x\n4. has an even number of elements\n5. does not include doubles.",
+  "options": [
+    "1, 5",
+    "2, 4",
+    "3, 5",
+    "2, 5",
+    "4, 5"
+  ],
+  "answer": "1, 5",
+  "explanation": "Each neighbor must differ from x in exactly one position (Hamming distance 1), and since x has 10 binary elements, it has exaclty 10 such neighbors (each differing by flipping one bit). Also, valid neighbor sets do not include duplicates by definition. Statement 3 is incorrect because not all neighbors are guaranteed to have better fitness; 4 is irrelevant to binary vector length."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "Generally, a genetic algorithm:\n1. starts a stochastic search in the solution space;\n2. uses a single variation operator;\n3. uses the tournament selection with FPS probability distribution;\n4. computes all the optimal solutions of a problem;\n5. uses DNA chains.",
+  "options": [
+    "1, 2, 3",
+    "2, 3, 4",
+    "1, 3, 4",
+    "1",
+    "5"
+  ],
+  "answer": "1",
+  "explanation": "Statement 1 is true: Genetic Algorithms (GAs) are stochastic search methods. Statement 2 is false because GAs typically use multiple operators (selection, crossover, mutation). Statement 3 is incorrect: tournament selection and FPS (fitness proportionate selection) are two distinct selection methods. Statement 4 is false — GAs aim for good solutions, not necessarily *all* optimal ones. Statement 5 is irrelevant — GAs use *chromosomes*, not biological DNA chains literally."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "In genetic algorithms, decoding",
+  "options": [
+    "is not necessary.",
+    "guarantees obtaining the optimal result.",
+    "must be performed after extracting the best individual of each generation.",
+    "None of the other answers is correct.",
+    "does not depend on the chosen representation."
+  ],
+  "answer": "None of the other answers is correct.",
+  "explanation": "Decoding is necessary to interpret a chromosome into a meaningful solution. It is not dependent solely on extracting the best individual, nor does it guarantee optimality. Moreover, decoding often *does* depend on the chosen representation — so none of the other answers are entirely correct."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "In a genetic algorithm, survivor selection:\n1. is applied on current population;\n2. in some cases requires computing a selection probability distribution;\n3. always uses stochastic factors;\n4. selects the next generation from individuals available after the mutation operation;\n5. selected individuals are always viable;\n6. sometimes uses stochastic factors;\n7. ensures the survival of the highest fitness individual from the current population;\n8. leads to an increase of average fitness in the current population;\n9. guarantees obtaining a population with superior average fitness if the age-based selection is used;\n10. is applied at the beginning of each iteration;\n11. is applied on the descendants obtained from the current population;\n12. is applied on the current population and the descendants obtained from the current population.",
+  "options": [
+    "4, 8, 11",
+    "2, 4, 5, 6, 12",
+    "6, 8, 11",
+    "1, 7",
+    "2, 3, 4, 5, 6, 11"
+  ],
+  "answer": "2, 4, 5, 6, 12",
+  "explanation": "Not sure if this is correct, but it seems to be the most comprehensive option. Survivor selection in GAs can involve:\n- 2: sometimes requires a probability distribution (e.g., tournament selection),\n- 4: typically selects from individuals after mutation,\n- 5: selected individuals are viable (fit enough),\n- 6: may use stochastic factors (e.g., roulette wheel),\n- 12: can involve both current and descendant populations.\nOther options are either too narrow or incorrect."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "Consider C a genetic recombination operator defined for the representation with permutations of size n (studied in class). Choose the correct statements:\n1. C is defined on a pair of permutations of size n.\n2. C always randomly selects two genes to implement the operation.\n3. The result of C is always unique.\n4. The result(s) of C is (are) permutation(s).",
+  "options": [
+    "1, 2, 3",
+    "1, 2, 4",
+    "1, 2",
+    "1, 4",
+    "3, 4"
+  ],
+  "answer": "1, 4",
+  "explanation": "Statement 1 is correct: recombination operators like PMX or OX operate on two parent permutations of the same size. Statement 4 is also correct: the result must be a valid permutation. Statement 2 is false — not all recombination operators select genes randomly (some use fixed points or slices). Statement 3 is false because recombination can produce multiple possible outcomes."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "Consider f a fitness function with positive values, defined on the size n permutation space. In a genetic algorithm that maximizes f:",
+  "options": [
+    "a mutation operation on a candidate always produces a weaker candidate.",
+    "the selection of next generation is always elitist.",
+    "a mutation operation on a candidate always produces a better candidate.",
+    "the parent selection may be implemented using the FPS probability distribution.",
+    "None of the other answers are correct."
+  ],
+  "answer": "the parent selection may be implemented using the FPS probability distribution.",
+  "explanation": "Fitness Proportionate Selection (FPS), also known as roulette wheel selection, is a valid and commonly used method for parent selection in genetic algorithms. Mutation is stochastic and can produce better or worse candidates, and selection is not necessarily elitist."
+},
+{
+  "category": "Evolutionary Algorithms",
+  "question": "The main feature of the fitness function in an evolutionary algorithm is that:",
+  "options": [
+    "None of the other answers is correct.",
+    "determines the end of the search process",
+    "determines the recombination operation",
+    "it is the basis for the mutation process",
+    "it is the basis for the selection process"
+  ],
+  "answer": "it is the basis for the selection process",
+  "explanation": "In evolutionary algorithms, the fitness function evaluates how well individuals perform relative to the problem objective. It is primarily used during the **selection process** to prefer better candidates for reproduction."
+},
+{
+  "category": "Evolutionary Strategies",
+  "question": "In ESs, chromosomes representation:\n1. Can be any of the following: binary strings, integer strings, real-valued vectors, permutations\n2. Can be integer strings or real-valued vectors\n3. Uses only real-valued vectors\n4. Does not influence the recombination operator\n5. Is determined by the particular problem to be solved\n6. Influences the crossover operator\n7. Influences the survivors selection mechanism",
+  "options": [
+    "1, 3, 4",
+    "3, 4",
+    "2, 4, 5",
+    "1, 7",
+    "2, 4, 5, 6"
+  ],
+  "answer": "3, 4",
+  "explanation": "Not sure"
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "The mating pool selection in GAs:\n1. Is used to solve only constrained problems\n2. Is applied once, after the initial population generation\n3. Is applied immediately an evaluated current population is available\n4. Is always based on a selection probability distribution\n5. Is applied on mutated offspring multiset\n6. Can be implemented based on a selection probability distribution\n7. Is an iterative process\n8. Is applied on current population\n9. Is applied once\n10. Generally uses the age factor to select individuals\n11. Is applied immediately before each mutation procedure\n12. Is applied on offspring multiset",
+  "options": [
+    "2, 5, 8, 12",
+    "3, 6, 7, 8",
+    "3, 6, 8, 12",
+    "4, 6, 7, 8",
+    "1, 2, 4, 5"
+  ],
+  "answer": "3, 6, 7, 8",
+  "explanation": "Not sure, but it seems to be the most comprehensive option. Mating pool selection in GAs is typically:\n- 3: applied after evaluating the current population,\n- 6: can use a selection probability distribution (e.g., roulette wheel),\n- 7: is iterative as it happens across generations,\n- 8: uses the current population for selection.\nOther options are either too narrow or incorrect."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "In GAs, the termination condition:\n1. Could miss\n2. Includes the control of the number of simulated generations\n3. Always uses random factors\n4. May include the population variability control\n5. Improves the average quality of the current population\n6. Guarantees a better population in case it uses age factor\n7. Does not depend on the chromosome encoding\n8. Depends on the chromosome representation",
+  "options": [
+    "2, 3, 4, 5",
+    "1, 5, 8",
+    "1, 4, 7, 8",
+    "3, 5, 6",
+    "2, 4, 7"
+  ],
+  "answer": "2, 4, 7",
+  "explanation": "Correct answers include:\n- 2: Termination can be based on a max number of generations.\n- 4: It can involve criteria like loss of diversity or lack of variability.\n- 7: Termination is typically independent of how the chromosome is encoded — it's more about population dynamics and convergence.\nOther options include incorrect or irrelevant statements (e.g., 1, 3, 5, 6, 8)."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "In every GA, the genotype representation:\n1. Can be any of the following: binary, integer, real valued vectors and permutation\n2. Is either integer representation or real valued vectors representation\n3. Is the real valued vectors representation\n4. Does not affect the recombination type\n5. Depends on the given problem\n6. Affects the recombination type\n7. Affects the mutation operator\n8. Affects the selections",
+  "options": [
+    "1, 3, 4, 6",
+    "1, 5, 6, 7",
+    "4, 5, 6, 7",
+    "1, 5, 6, 8",
+    "4, 5, 6, 7, 8"
+  ],
+  "answer": "1, 5, 6, 7",
+  "explanation": " In GAs, the genotype representation:\n1. Can be binary, integer, real-valued vectors, or permutations.\n5. Depends on the problem being solved (e.g., TSP uses permutations).\n6. Affects recombination type (e.g., PMX for permutations, arithmetic for real-valued).\n7. Affects mutation operator (e.g., bit-flip for binary, Gaussian for real-valued).\n8 is not always true as selection methods can be independent of representation."
+},
+{
+  "category": "Genetic Algorithms",
+  "question": "Let v = [0, 1, 1, 0, 0, 1, 0] be a binary vector. Select the correct statement(s):\na. A mutation in a gene of v can produce a vector with all bits equal to 1;\nb. A mutation in a gene of v can produce a vector with all bits equal to 0;\nc. A mutation in a gene of v can produce a vector with 4 bits equal to 1;\nd. A mutation in a gene of v can produce a vector with 4 bits equal to 0;\ne. None of the other answers.",
+  "options": [
+    "b, c and d",
+    "c",
+    "a, b and d",
+    "a, d, c and d",
+    "e"
+  ],
+  "answer": "c",
+  "explanation": "A mutation in a binary vector flips one bit. The vector v has 4 bits equal to 1 and 3 bits equal to 0. Flipping any of the bits that are currently 0 will not produce a vector with all bits equal to 1 or all bits equal to 0, but it can produce a vector with exactly 4 bits equal to 1 (by flipping one of the 0s). Thus, only option c is correct."
+}
 
 ];
 

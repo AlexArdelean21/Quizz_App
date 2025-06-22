@@ -1,31 +1,17 @@
-# 📚 Business Law Quiz - Interactive Learning Platform
+# 📚 EV and GA Quiz - Interactive Learning Platform
 
 ## 🚀 Overview
 
-This project is an interactive quiz application designed to help us pass the Business Law exam.
+This project is an interactive quiz application designed to help us pass the Evolutionary and Genetic Algorithms exam.
 
 ## ✨ Key Features
 
--   **Extensive Question Database:** Contains 65+ high-quality questions covering a wide range of Business Law topics, including:
-    -   Introduction to Business Law
-    -   Legal Rules and Systems
-    -   Legal Relations
-    -   Contracts (Formation, Performance, Breach)
-    -   Legal Professionals & Ethics
-    -   Business Organizations (Corporations, LLCs, Partnerships)
-    -   Commercial Transactions (UCC, Sales, Warranties)
-    -   Employment Law
-    -   Intellectual Property (Trademarks, Copyrights, Patents)
-    -   Tort Law (Negligence, Strict Liability)
-    -   Corporate Governance & Fiduciary Duties
-    -   Securities Law & SEC Regulations
-    -   Banking & Finance Law
-    -   Consumer Protection
-    -   Antitrust Law
-    -   International Business Law
-    -   Property Law
-    -   Dispute Resolution (Arbitration, Mediation)
-    -   Technology & Cyber Law
+-   **Extensive Question Database:** Contains 65+ high-quality questions covering a wide range of EV and GA topics, including:
+    -   Genetic Algorithms
+    -   Evolutionary Computation
+    -   Evolutionary Strategies
+    -   Memetic Algorithms
+    -   Optimization Theory
 -   **Randomized Quizzes:** Each quiz session presents 20 questions randomly selected from the database, ensuring a unique experience each time.
 -   **Randomized Answer Options:** The order of answer choices for each question is shuffled to prevent pattern recognition.
 -   **Immediate Feedback:** Users receive instant feedback after submitting an answer, indicating if it's correct or incorrect, along with a detailed explanation for the correct answer.
@@ -71,4 +57,4 @@ This project is an interactive quiz application designed to help us pass the Bus
 
 ---
 
-This quiz application provides a solid foundation for learning Business Law. Enjoy testing your knowledge!
+This quiz application provides a solid foundation for learning EV and GA. Enjoy testing your knowledge!
