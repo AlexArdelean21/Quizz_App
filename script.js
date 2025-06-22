@@ -1127,7 +1127,7 @@ const questionDatabase = [
     "d. is not used.",
     "e. always leads to optimal results."
   ],
-  "answer": "b. None of the other answers is correct.",
+  "answer": "c. is the most commonly used genotype representation.",
   "explanation": "Binary representation is often used in genetic algorithms, but its use depends on the nature of the problem. It is not always the best or optimal choice, nor does it guarantee optimal results, and it is definitely used in many GAs — so none of the other answers are entirely correct."
 },
 {
