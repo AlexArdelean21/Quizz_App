@@ -622,21 +622,51 @@ const questionDatabase = [
 },
 {
   "category": "Genetic Algorithms - Recombination",
-  "question": "În cadrul unui algoritm genetic operația de recombinare:",
+  "question": "În cadrul unui algoritm genetic, operația de recombinare:",
   "options": [
-    "1. Este efectuată o singură dată pe parcursul unui algoritm genetic",
-    "2. Este efectuată imediat după fiecare etapă de selecție a părinților",
-    "3. În general probabilitatea de recombinare nu contează în rezolvarea problemelor prin algoritmi genetici",
-    "4. Este efectuată imediat înaintea fiecărei proceduri de mutație",
-    "5. Este efectuată imediat înaintea fiecărei etape de selecție a părinților",
-    "6. Utilizează populația inițială",
-    "7. Este utilizată doar în probleme fără constrîngeri",
-    "8. Este utilizată cu probabilitate mare",
-    "9. Este utilizată cu probabilitate mică",
-    "10. Este efectuată o singură dată, după prima etapă de selecție a părinților"
+    {
+      "id": "1",
+      "text": "Este efectuată o singură dată pe parcursul unui algoritm genetic"
+    },
+    {
+      "id": "2",
+      "text": "Este efectuată imediat după fiecare etapă de selecție a părinților"
+    },
+    {
+      "id": "3",
+      "text": "În general probabilitatea de recombinare nu contează în rezolvarea problemelor prin algoritmi genetici"
+    },
+    {
+      "id": "4",
+      "text": "Este efectuată imediat înaintea fiecărei proceduri de mutație"
+    },
+    {
+      "id": "5",
+      "text": "Este efectuată imediat înaintea fiecărei etape de selecție a părinților"
+    },
+    {
+      "id": "6",
+      "text": "Utilizează populația inițială"
+    },
+    {
+      "id": "7",
+      "text": "Este utilizată doar în probleme fără constrîngeri"
+    },
+    {
+      "id": "8",
+      "text": "Este utilizată cu probabilitate mare"
+    },
+    {
+      "id": "9",
+      "text": "Este utilizată cu probabilitate mică"
+    },
+    {
+      "id": "10",
+      "text": "Este efectuată o singură dată, după prima etapă de selecție a părinților"
+    }
   ],
   "answer": ["2", "4", "8"],
-  "explanation": "În algoritmii genetici, recombinarea este de obicei aplicată imediat după selecție, înainte de mutație, și cu o probabilitate mare pentru a explora spațiul soluțiilor."
+  "explanation": "În algoritmii genetici, recombinarea este de obicei aplicată imediat după selecție, înainte de mutație și cu o probabilitate mare, pentru a permite combinarea caracteristicilor părinților și explorarea eficientă a spațiului soluțiilor."
 },
 {
   "category": "Genetic Algorithms - Binary Representation",
