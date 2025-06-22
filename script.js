@@ -607,52 +607,18 @@ const questionDatabase = [
 },
 {
   "category": "Genetic Algorithms - Recombination",
-  "question": "În cadrul unui algoritm genetic, operația de recombinare:",
+  "question": "În cadrul unui algoritm genetic, operația de recombinare:\n1. Este efectuată o singură dată pe parcursul unui algoritm genetic\n2. Este efectuată imediat după fiecare etapă de selecție a părinților\n3. În general probabilitatea de recombinare nu contează în rezolvarea problemelor prin algoritmi genetici\n4. Este efectuată imediat înaintea fiecărei proceduri de mutație\n5. Este efectuată imediat înaintea fiecărei etape de selecție a părinților\n6. Utilizează populația inițială\n7. Este utilizată doar în probleme fără constrîngeri\n8. Este utilizată cu probabilitate mare\n9. Este utilizată cu probabilitate mică\n10. Este efectuată o singură dată, după prima etapă de selecție a părinților",
   "options": [
-    {
-      "id": "1",
-      "text": "Este efectuată o singură dată pe parcursul unui algoritm genetic"
-    },
-    {
-      "id": "2",
-      "text": "Este efectuată imediat după fiecare etapă de selecție a părinților"
-    },
-    {
-      "id": "3",
-      "text": "În general probabilitatea de recombinare nu contează în rezolvarea problemelor prin algoritmi genetici"
-    },
-    {
-      "id": "4",
-      "text": "Este efectuată imediat înaintea fiecărei proceduri de mutație"
-    },
-    {
-      "id": "5",
-      "text": "Este efectuată imediat înaintea fiecărei etape de selecție a părinților"
-    },
-    {
-      "id": "6",
-      "text": "Utilizează populația inițială"
-    },
-    {
-      "id": "7",
-      "text": "Este utilizată doar în probleme fără constrîngeri"
-    },
-    {
-      "id": "8",
-      "text": "Este utilizată cu probabilitate mare"
-    },
-    {
-      "id": "9",
-      "text": "Este utilizată cu probabilitate mică"
-    },
-    {
-      "id": "10",
-      "text": "Este efectuată o singură dată, după prima etapă de selecție a părinților"
-    }
+    "2, 4, 8",
+    "1, 5, 9",
+    "3, 6, 7",
+    "2, 3, 10",
+    "4, 7, 8"
   ],
-  "answer": ["2", "4", "8"],
-  "explanation": "În algoritmii genetici, recombinarea este de obicei aplicată imediat după selecție, înainte de mutație și cu o probabilitate mare, pentru a permite combinarea caracteristicilor părinților și explorarea eficientă a spațiului soluțiilor."
-},
+  "answer": "2, 4, 8",
+  "explanation": "În algoritmii genetici, recombinarea se aplică în mod tipic imediat după selecția părinților (2), înainte de mutație (4), și are o probabilitate mare de aplicare (8) pentru a încuraja diversitatea genetică."
+}
+,
 {
   "category": "Genetic Algorithms - Binary Representation",
   "question": "În algoritmii genetici, reprezentarea binară",
@@ -927,7 +893,7 @@ const questionDatabase = [
     "1, 2",
     "2, 3, 4"
   ],
-  "answer": "1, 2, 4",
+  "answer": "1, 4",
   "explanation": "1. Mutation is a unary operator as it works on a single individual.\n4. Since M operates on permutations, the result must remain a valid permutation. Statement 3 is false: mutation should preserve the length of the permutation."
 },
 {
@@ -1307,9 +1273,6 @@ const questionDatabase = [
   "answer": "is used in problems where the order of a sequence of events must be computed.",
   "explanation": "Permutation representation is commonly used in problems where the order of items matters, such as scheduling or the traveling salesman problem. It allows for the use of both recombination and mutation operators, specially adapted to maintain valid permutations."
 }
-
-
-
 ];
 
 // Quiz State Management
