@@ -353,7 +353,7 @@ const questionDatabase = [
     "2, 4, 6, 7, 8",
     "2, 4, 6, 7, 9"
   ],
-  answer: "2, 4, 6, 7, 9",
+  answer: "2, 4, 6, 7, 8",
   explanation: "Memetic algorithms combine evolutionary strategies with local search techniques. Hill climbing, local heuristics, and methods like 2MASS or data validation are often integrated to refine individual solutions."
 },
 {
@@ -475,20 +475,18 @@ const questionDatabase = [
 },
 {
   "category": "Local Search Algorithms",
-  "question": "Algoritmul Hillclimbing are următoarele caracteristici:",
+  "question": "Algoritmul Hillclimbing are următoarele caracteristici:\n1. Se aplică asupra unui singur punct din spațiul de căutare\n2. Aplicarea se poate repeta pentru mai multe puncte pentru a crește performanțele\n3. Este inspirat din tehnicile de alpinism\n4. Găsește întotdeauna soluția optimă\n5. Găsește soluția optimă\n6. Calculele se încheie atunci când temperatura sistemului devine zero\n7. De obicei găsește un punct de optim local\n8. Se utilizează numai pentru reprezentarea cu șiruri de numere reale",
   "options": [
-    "1. Se aplică asupra unui singur punct din spațiul de căutare",
-    "2. Aplicarea se poate repeta pentru mai multe puncte pentru a crește performanțele",
-    "3. Este inspirat din tehnicile de alpinism",
-    "4. Găsește întotdeauna soluția optimă",
-    "5. Găsește soluția optimă",
-    "6. Calculele se încheie atunci când temperatura sistemului devine zero",
-    "7. De obicei găsește un punct de optim local",
-    "8. Se utilizează numai pentru reprezentarea cu șiruri de numere reale"
+    "1, 2, 7",
+    "1, 3, 5",
+    "2, 6, 8",
+    "3, 4, 7",
+    "1, 2, 4"
   ],
   "answer": "1, 2, 7",
-  "explanation": "Algoritmul Hill Climbing pornește dintr-un singur punct și încearcă să găsească îmbunătățiri locale, repetându-se uneori din mai multe puncte pentru a evita local optima. Nu garantează găsirea soluției globale optime."
-},
+  "explanation": "Algoritmul Hill Climbing este o metodă locală care pornește dintr-un singur punct, poate fi reluată din puncte diferite pentru a evita capcanele optimelor locale și, în general, returnează un punct de optim local, nu global."
+}
+,
 {
   "category": "Evolutionary Algorithms",
   "question": "Într-un algoritm evolutiv, selecția părinților forțează:",
@@ -504,29 +502,16 @@ const questionDatabase = [
 },
 {
   "category": "Genetic Algorithms",
-  "question": "În cadrul unui algoritm genetic, operația de selecție a supraviețuitorilor implică:",
+  "question": "În cadrul unui algoritm genetic, operația de selecție a supraviețuitorilor implică următoarele:\n1. Se aplică asupra populației curente\n2. În unele variante necesită calcularea unei distribuții de probabilitate de selecție\n3. Utilizează întotdeauna factori aleatori\n4. Alege generația următoare dintre indivizii disponibili după operația de mutație\n5. Indivizii aleși sunt întotdeauna fezabili\n6. Uneori utilizează factori aleatori\n7. Asigură perpetuarea individului cu calitate maximă din populația curentă\n8. Duce la creșterea calității medii a populației curente\n9. Garantează obținerea unei generații cu calitate medie superioară dacă folosește selecția bazată pe vârstă\n10. Se aplică la începutul fiecărei iterații\n11. Se aplică asupra descendenților obținuți din populația curentă\n12. Se aplică asupra populației curente și asupra descendenților obținuți din populația curentă",
   "options": [
-    "1. Se aplică asupra populației curente",
-    "2. În unele variante necesită calcularea unei distribuții de probabilitate de selecție",
-    "3. Utilizează întotdeauna factori aleatori",
-    "4. Alege generația următoare dintre indivizii disponibili după operația de mutație",
-    "5. Indivizii aleși sunt întotdeauna fezabili",
-    "6. Uneori utilizează factori aleatori",
-    "7. Asigură perpetuarea individului cu calitate maximă din populația curentă",
-    "8. Duce la creșterea calității medii a populației curente",
-    "9. Garantează obținerea unei generații cu calitate medie superioară dacă folosește selecția bazată pe vârstă",
-    "10. Se aplică la începutul fiecărei iterații",
-    "11. Se aplică asupra descendenților obținuți din populația curentă",
-    "12. Se aplică asupra populației curente și asupra descendenților obținuți din populația curentă"
+    "2, 4, 5, 6, 12",
+    "1, 3, 7, 10",
+    "4, 5, 6, 8",
+    "2, 5, 9, 12",
+    "3, 6, 11"
   ],
-  "answer": [
-    "2. În unele variante necesită calcularea unei distribuții de probabilitate de selecție",
-    "4. Alege generația următoare dintre indivizii disponibili după operația de mutație",
-    "5. Indivizii aleși sunt întotdeauna fezabili",
-    "6. Uneori utilizează factori aleatori",
-    "12. Se aplică asupra populației curente și asupra descendenților obținuți din populația curentă"
-  ],
-  "explanation": "Selecția supraviețuitorilor poate necesita o distribuție de probabilitate (2), poate utiliza factori aleatori (6), implică alegerea dintre descendenți și indivizii mutați (4, 5) și uneori combină populația curentă și descendenții (12)."
+  "answer": "2, 4, 5, 6, 12",
+  "explanation": "Selecția supraviețuitorilor poate necesita o distribuție de probabilitate (2), implică alegerea după mutație (4), presupune indivizi fezabili (5), uneori implică factori aleatori (6) și poate fi aplicată pe populația curentă și descendenți (12)."
 },
 {
   "category": "Genetic Algorithms",
@@ -683,19 +668,18 @@ const questionDatabase = [
 },
 {
   "category": "Genetic Algorithms - Characteristics",
-  "question": "Un algoritm genetic care maximizează o funcție de calitate este:",
+  "question": "Un algoritm genetic care maximizează o funcție de calitate este caracterizat prin următoarele:\n1. stocastic\n2. determinist\n3. bazat pe populații\n4. finit\n5. convergent indiferent de operatorii de variație folosiți\n6. convergent, dacă operatorii de variație folosiți acoperă tot spațiul soluțiilor\n7. independent de reprezentare",
   "options": [
-    "1. stocastic",
-    "2. determinist",
-    "3. bazat pe populații",
-    "4. finit",
-    "5. convergent indiferent de operatorii de variație folosiți",
-    "6. convergent, dacă operatorii de variație folosiți acoperă tot spațiul soluțiilor",
-    "7. independent de reprezentare"
+    "1, 3, 4, 6",
+    "2, 3, 5",
+    "1, 2, 7",
+    "1, 3, 6",
+    "4, 5, 6"
   ],
-  "answer": ["1. stocastic", "3. bazat pe populații", "4. finit", "6. convergent, dacă operatorii de variație folosiți acoperă tot spațiul soluțiilor"],
-  "explanation": "Un algoritm genetic tipic este stocastic, lucrează pe o populație de soluții, are un număr finit de iterații și converge dacă operatorii pot acoperi întregul spațiu de soluții."
+  "answer": "1, 3, 4, 6",
+  "explanation": "Algoritmii genetici sunt în general stocastici (1), lucrează pe o populație (3), rulează pe un număr finit de generații (4) și pot converge dacă operatorii de variație acoperă întreg spațiul de soluții (6)."
 },
+
 {
   "category": "Genetic Algorithms - Integer Representation",
   "question": "În algoritmii genetici, reprezentarea prin șiruri de numere întregi",
@@ -970,7 +954,7 @@ const questionDatabase = [
     "1, 2, 5"
   ],
   "answer": "1, 2, 5",
-  "explanation": "ES algorithms:\n1. Perform a stochastic search, not deterministic.\n2. Rely primarily on mutation to explore the search space.\n5. Use recombination (local or global) to combine parent information.\nStatements 3 and 4 are false: elitist selection is not necessarily used, and ES does not aim to compute all optimal solutions."
+  "explanation": "not sure if it's 5 or 3"
 },
 {
   "category": "Evolutionary Algorithms",
@@ -1153,7 +1137,178 @@ const questionDatabase = [
   ],
   "answer": "c",
   "explanation": "A mutation in a binary vector flips one bit. The vector v has 4 bits equal to 1 and 3 bits equal to 0. Flipping any of the bits that are currently 0 will not produce a vector with all bits equal to 1 or all bits equal to 0, but it can produce a vector with exactly 4 bits equal to 1 (by flipping one of the 0s). Thus, only option c is correct."
+},
+{
+  "category": "Evolutionary Algorithms - Selection",
+  "question": "In an evolutionary algorithm, the selection process favors",
+  "options": [
+    "a. None of the other answers is correct.",
+    "b. the best adapted individuals",
+    "c. the average individuals",
+    "d. the end of the search",
+    "e. the low fitness individuals"
+  ],
+  "answer": "b. the best adapted individuals",
+  "explanation": "In evolutionary algorithms, the selection process favors individuals with the highest fitness, as they are considered the best adapted to the problem environment and are more likely to pass on their genes to the next generation."
+},
+{
+  "category": "Genetic Algorithms - Representation",
+  "question": "In genetic algorithms, the binary representation",
+  "options": [
+    "a. does not depend on the problem being solved.",
+    "b. None of the other answers is correct.",
+    "c. is the most commonly used genotype representation.",
+    "d. is not used.",
+    "e. always leads to optimal results."
+  ],
+  "answer": "b. None of the other answers is correct.",
+  "explanation": "Binary representation is often used in genetic algorithms, but its use depends on the nature of the problem. It is not always the best or optimal choice, nor does it guarantee optimal results, and it is definitely used in many GAs — so none of the other answers are entirely correct."
+},
+{
+  "category": "Genetic Algorithms - Genotype and Phenotype",
+  "question": "In an evolutionary algorithm, the genotypes are",
+  "options": [
+    "a. individuals with high fitness",
+    "b. individuals with average fitness",
+    "c. None of the other answers is correct.",
+    "d. representations of phenotypes in an evolutionary context",
+    "e. individuals with low fitness"
+  ],
+  "answer": "d. representations of phenotypes in an evolutionary context",
+  "explanation": "In evolutionary algorithms, a genotype is the internal representation (often a binary string or other encoding) of a solution, which is mapped to a phenotype (the actual solution). Thus, genotypes are representations of phenotypes in an evolutionary context."
+},
+{
+  "category": "Evolutionary Strategies - Self-Adaptation",
+  "question": "In evolutionary strategy algorithms based on populations, self-adaptation is performed",
+  "options": [
+    "a. by using a distinct mutation step for each individual.",
+    "b. on individuals with fitness values close to the optimum.",
+    "c. after a preset number of generations.",
+    "d. None of the other answers is correct.",
+    "e. based on 1/5 success rate."
+  ],
+  "answer": "e. based on 1/5 success rate.",
+  "explanation": "Self-adaptation in population-based evolutionary strategies involves evolving strategy parameters alongside individuals, and none of the listed options correctly describe the general self-adaptation approach, hence 'd' is correct."
+},
+{
+  "category": "Evolutionary Algorithms - Selection",
+  "question": "In an evolutionary algorithm, parent selection forces:",
+  "options": [
+    "a. ending the computations.",
+    "b. improvement of global fitness when switching to the new generation.",
+    "c. continuation of computations.",
+    "d. reevaluation of the best solution obtained until the current moment.",
+    "e. diversity in the multiset of candidates."
+  ],
+  "answer": "b. improvement of global fitness when switching to the new generation.",
+  "explanation": "Parent selection favors individuals with higher fitness, thus improving overall population quality."
+},
+{
+  "category": "Genetic Algorithms - Mutation",
+  "question": "Choose the correct statement:",
+  "options": [
+    "a. The stop condition in a genetic algorithm depends on the representation of chromosomes.",
+    "b. 2MES algorithms always compute a global optimum.",
+    "c. The mutation in a genetic algorithm depends on the representation of chromosomes.",
+    "d. The selection of the next generation in a genetic algorithm depends on the representation of chromosomes.",
+    "e. The selection of parents in a genetic algorithm depends on the representation of chromosomes."
+  ],
+  "answer": "c. The mutation in a genetic algorithm depends on the representation of chromosomes.",
+  "explanation": "The mutation operator in genetic algorithms is affected by how the chromosome is represented (e.g., binary, integer, permutation). Different representations require different mutation strategies."
+},
+{
+  "category": "Genetic Algorithms - Mutation",
+  "question": "The arity of the mutation operator in a genetic algorithm is:",
+  "options": [
+    "a. not fixed",
+    "b. None of the other answers is correct.",
+    "c. unary",
+    "d. binary",
+    "e. higher than 9"
+  ],
+  "answer": "c. unary",
+  "explanation": "In genetic algorithms, the mutation operator is typically unary, meaning it operates on a single individual (solution) to produce a modified version of it."
+},
+{
+  "category": "Evolutionary Algorithms - Components",
+  "question": "The components of evolutionary algorithms are: 1. the representation; 2. the mutation probability; 3. the fitness function; 4. the recombination probability; 5. the population; 6. the random number generation; 7. the parent selection mechanism; 8. the generation of permutations; 9. the graphical representation of evolution of fitness; 10. the variation operators; 11. the calculation of the genetic diversity of the population; 12. the mechanism for replacing the current population; 13. hillclimbing; 14. population initialization; 15. stop condition; 16. also used in evolutionary strategies.",
+  "options": [
+    "a. 1, 3, 5, 6, 10, 13, 14, 15",
+    "b. 2, 4, 5, 9, 15",
+    "c. 2, 4, 6, 8, 11, 13, 16",
+    "d. 1, 2, 5, 6, 7, 14, 15",
+    "e. 1, 3, 5, 7, 10, 12, 14, 15, 16"
+  ],
+  "answer": "e. 1, 3, 5, 7, 10, 12, 14, 15, 16",
+  "explanation": "The key components of evolutionary algorithms include representation, fitness function, population, selection, variation operators, population replacement, and stopping condition. Hillclimbing and permutations are not core components, while graphical visualization and diversity measurement are supplementary."
+},
+{
+  "category": "Evolutionary Algorithms - Fitness Function",
+  "question": "In an evolutionary algorithm, the fitness function: 1. evaluates the quality of the algorithm; 2. evaluates the quality of each candidate; 3. evaluates the speed of finding the solution vs. resource consumption; 4. must be optimized; 5. decides if a descendent is viable; 6. selects the individuals that will reproduce; 7. selects the individuals that pass into the next generation; 8. is a chromosome function; 9. evaluates the quality of the current generation; 10. evaluates the quality of the current generation vs. the previous generation.",
+  "options": [
+    "a. 5, 8",
+    "b. 6, 7, 8",
+    "c. 9, 10",
+    "d. 1, 3",
+    "e. 2, 4, 8"
+  ],
+  "answer":  "e. 2, 4, 8",
+  "explanation": "Not sure"
+},
+{
+  "category": "Optimization - Global Maximum Methods",
+  "question": "Consider f : D=[0,1] → [0,5] the target function (fitness) of a maximization problem. A method that can compute a global maximum point of f is: 1. compute the fitness of every element in D and choose the best one; 2. backtracking; 3. generally stochastic, based on individuals; 4. generally stochastic, based on populations; 5. any of the other methods can be used.",
+  "options": [
+    "a. 4, 5",
+    "b. 5",
+    "c. 4",
+    "d. 2, 5",
+    "e. 1, 5"
+  ],
+  "answer":  "e. 1, 5",
+  "explanation": "Computing the fitness of every element (exhaustive search) ensures the global maximum is found. Alternatively, metaheuristic methods may work but without a guarantee—so 'any method' covers this possibility."
+},
+{
+  "category": "Evolutionary Algorithms - Fundamentals",
+  "question": "An evolutionary algorithm",
+  "options": [
+    "a. imposes an update rule which depends on the current iteration.",
+    "b. uses a representation independent of the problem solution space.",
+    "c. does not depend on the particular problem to be solved.",
+    "d. None of the other answers is correct.",
+    "e. operates on the same population of candidates in every iteration."
+  ],
+  "answer": "d. None of the other answers is correct.",
+  "explanation": "All other options are incorrect or misleading. Evolutionary algorithms adapt across generations, use problem-dependent representations, and typically evolve a changing population — thus 'None of the other answers is correct' is the valid choice."
+},
+{
+  "category": "Genetic Algorithms - GENITOR Selection",
+  "question": "Consider a genetic algorithm that uses a current population with 5 members and stable-state population model, with constant size. The fitness values for the current population are {2, 2, 8, 9, 9} and 2 descendants were created, with fitness values 7 and 8. Using the GENITOR selection mechanism with miu=5, lambda=2, the fitness values of the new population are:",
+  "options": [
+    "{7, 8, 8, 8, 9}",
+    "{2, 7, 8, 9, 9}",
+    "{2, 2, 7, 8, 8}",
+    "{7, 8, 8, 9, 9}",
+    "{8, 8, 8, 9, 9}"
+  ],
+  "answer": "{7, 8, 8, 9, 9}",
+  "explanation": "In the GENITOR approach, the worst individuals are replaced by the new offspring. Given the original population {2, 2, 8, 9, 9} and offspring {7, 8}, the two worst individuals (2, 2) are replaced by 7 and 8, yielding the new population: {7, 8, 8, 9, 9}."
+},
+{
+  "category": "Genetic Algorithms - Representation",
+  "question": "In genetic algorithms, the permutation representation",
+  "options": [
+    "does not allow the use of recombination operators.",
+    "is used in problems where the order of a sequence of events must be computed.",
+    "does not allow the use of mutation operators.",
+    "is not used.",
+    "does not allow the use of selection operators."
+  ],
+  "answer": "is used in problems where the order of a sequence of events must be computed.",
+  "explanation": "Permutation representation is commonly used in problems where the order of items matters, such as scheduling or the traveling salesman problem. It allows for the use of both recombination and mutation operators, specially adapted to maintain valid permutations."
 }
+
+
 
 ];
 
